@@ -3,109 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Portfolio</title>
-  <meta name="description" content="Portfolio of Your Name — designer and developer." />
+  <title>Lale — Portfolio</title>
+  <meta name="description" content="Portfolio of Lale — A-level student building toward engineering. Projects in game development and robotics." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <!-- ===== NAV ===== -->
-  <nav class="nav" id="nav">
-    <a href="#top" class="nav__logo">YN</a>
-    <div class="nav__links">
-      <a href="#work">Work</a>
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo">L—</a>
+    <nav class="nav__links" aria-label="Primary">
       <a href="#about">About</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="top">
-    <div class="hero__glow"></div>
-    <p class="hero__eyebrow reveal">Portfolio</p>
-    <h1 class="hero__headline">
-      <span class="word reveal">Your</span>
-      <span class="word reveal">Name.</span><br />
-      <span class="word reveal">Designer</span>
-      <span class="word reveal">&amp;</span>
-      <span class="word reveal">developer.</span>
-    </h1>
-    <p class="hero__sub reveal">I build things across web, product, and brand — swap this line for your own tagline.</p>
-    <a href="#work" class="hero__cta reveal">View the work ↓</a>
-  </section>
+  <main id="main">
 
-  <!-- ===== WORK ===== -->
-  <section class="work" id="work">
-    <div class="section__head reveal">
-      <p class="section__eyebrow">Selected work</p>
-      <h2>A few different settings.</h2>
-    </div>
+    <!-- ===== HERO ===== -->
+    <section class="hero tick-frame" id="top" aria-label="Introduction">
+      <p class="eyebrow reveal">Portfolio — Sheet 01</p>
+      <h1 class="hero__headline reveal">
+        Lale.<br />
+        <span class="hero__headline-sub">Building toward engineering.</span>
+      </h1>
+      <p class="hero__sub reveal">
+        A-level student studying Maths, Physics and Computer Science. This site tracks what I'm building on the way there — right now, a game and a robotic hand.
+      </p>
+      <a href="#projects" class="hero__cta reveal">See the work ↓</a>
+    </section>
 
-    <div class="filters reveal">
-      <button class="filter is-active" data-filter="all">All</button>
-      <button class="filter" data-filter="web">Web</button>
-      <button class="filter" data-filter="mobile">Mobile</button>
-      <button class="filter" data-filter="brand">Brand</button>
-    </div>
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <p class="eyebrow reveal">Sheet 02 — About</p>
+      <h2 id="about-heading" class="reveal">About me</h2>
 
-    <div class="grid" id="grid">
-      <article class="card reveal" data-tag="web">
-        <div class="card__media"></div>
-        <div class="card__body">
-          <p class="card__tag">Web</p>
-          <h3>Project One</h3>
-          <p>Short one-line description of what this project is and what you did.</p>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>
+            I'm an A-level student with a plan to study engineering at university, and this site is where I'm putting that intent into practice — actually building things, not just studying them. Replace this paragraph with your own voice: what got you into this, what you care about, what you're like to work with.
+          </p>
+          <p>
+            Outside of coursework, I build PCs and put together my own tools and study resources. I like projects that make me learn something new the hard way.
+          </p>
         </div>
-      </article>
 
-      <article class="card reveal" data-tag="mobile">
-        <div class="card__media"></div>
-        <div class="card__body">
-          <p class="card__tag">Mobile</p>
-          <h3>Project Two</h3>
-          <p>Short one-line description of what this project is and what you did.</p>
-        </div>
-      </article>
+        <dl class="spec-list reveal" aria-label="Quick facts">
+          <div class="spec-list__row">
+            <dt>Studying</dt>
+            <dd>Maths, Physics, Computer Science (A-level)</dd>
+          </div>
+          <div class="spec-list__row">
+            <dt>Aiming for</dt>
+            <dd>Engineering degree</dd>
+          </div>
+          <div class="spec-list__row">
+            <dt>Languages</dt>
+            <dd>Kurdish, English</dd>
+          </div>
+          <div class="spec-list__row">
+            <dt>Currently building</dt>
+            <dd>A game, and a robotic hand</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
 
-      <article class="card reveal" data-tag="brand">
-        <div class="card__media"></div>
-        <div class="card__body">
-          <p class="card__tag">Brand</p>
-          <h3>Project Three</h3>
-          <p>Short one-line description of what this project is and what you did.</p>
-        </div>
-      </article>
+    <!-- ===== PROJECTS ===== -->
+    <section class="projects" id="projects" aria-labelledby="projects-heading">
+      <p class="eyebrow reveal">Sheet 03 — Projects</p>
+      <h2 id="projects-heading" class="reveal">Two things I'm building</h2>
+      <p class="projects__intro reveal">
+        Both are early. I'd rather show real progress than fill this page with finished-looking placeholders — check back as these move forward.
+      </p>
 
-      <article class="card reveal" data-tag="web">
-        <div class="card__media"></div>
-        <div class="card__body">
-          <p class="card__tag">Web</p>
-          <h3>Project Four</h3>
-          <p>Short one-line description of what this project is and what you did.</p>
-        </div>
-      </article>
-    </div>
-  </section>
+      <div class="project-grid">
 
-  <!-- ===== ABOUT ===== -->
-  <section class="about" id="about">
-    <div class="about__inner">
-      <p class="section__eyebrow reveal">About</p>
-      <h2 class="reveal">A short paragraph about who you are, what you're studying or working on, and the kind of work you like to make. Keep it to two or three sentences — this is the section people read when they want to know you're a real person, not just a grid of projects.</h2>
-    </div>
-  </section>
+        <article class="project-card tick-frame reveal" aria-labelledby="project-1-title">
+          <span class="project-card__stamp">In development</span>
+          <p class="project-card__index">01</p>
+          <p class="project-card__tag">Video game</p>
+          <h3 id="project-1-title">Untitled game — title TBD</h3>
+          <p class="project-card__desc">
+            A fully playable game I'm building solo, aiming to publish once it's finished. Replace this with the real pitch once you've started: genre, what makes it worth playing, what you're proudest of technically.
+          </p>
+          <ul class="project-card__meta">
+            <li><span class="meta-label">Status</span> Not yet started</li>
+            <li><span class="meta-label">Tools</span> TBD</li>
+          </ul>
+        </article>
+
+        <article class="project-card tick-frame reveal" aria-labelledby="project-2-title">
+          <span class="project-card__stamp">Early research</span>
+          <p class="project-card__index">02</p>
+          <p class="project-card__tag">Robotics</p>
+          <h3 id="project-2-title">Robotic hand</h3>
+          <p class="project-card__desc">
+            A build I don't expect to fully finish, documented honestly as I go — design decisions, what broke, what I'd do differently. Process over polish.
+          </p>
+          <ul class="project-card__meta">
+            <li><span class="meta-label">Status</span> Not yet started</li>
+            <li><span class="meta-label">Tools</span> TBD</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
 
   <!-- ===== CONTACT / FOOTER ===== -->
-  <footer class="contact" id="contact">
-    <p class="section__eyebrow reveal">Get in touch</p>
-    <h2 class="reveal">Let's build something.</h2>
+  <footer class="contact" id="contact" aria-labelledby="contact-heading">
+    <p class="eyebrow reveal">Sheet 04 — Contact</p>
+    <h2 id="contact-heading" class="reveal">Get in touch</h2>
     <a href="mailto:you@example.com" class="contact__email reveal">you@example.com</a>
-    <div class="contact__links reveal">
+    <nav class="contact__links reveal" aria-label="Social links">
       <a href="#" target="_blank" rel="noopener">GitHub</a>
       <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="#" target="_blank" rel="noopener">Instagram</a>
-    </div>
-    <p class="contact__foot">© <span id="year"></span> Your Name</p>
+    </nav>
+    <p class="contact__foot">© <span id="year"></span> Lale</p>
   </footer>
 
   <script src="script.js"></script>

@@ -18,22 +18,5 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealEls.forEach((el) => revealObserver.observe(el));
 
-// ===== Work filters =====
-const filters = document.querySelectorAll('.filter');
-const cards = document.querySelectorAll('.card');
-
-filters.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    filters.forEach((b) => b.classList.remove('is-active'));
-    btn.classList.add('is-active');
-
-    const target = btn.dataset.filter;
-    cards.forEach((card) => {
-      const match = target === 'all' || card.dataset.tag === target;
-      card.classList.toggle('is-hidden', !match);
-    });
-  });
-});
-
 // ===== Footer year =====
 document.getElementById('year').textContent = new Date().getFullYear();
