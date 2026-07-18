@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name — designer and developer." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <a href="#top" class="nav__logo">YN</a>
+    <div class="nav__links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero__glow"></div>
+    <p class="hero__eyebrow reveal">Portfolio</p>
+    <h1 class="hero__headline">
+      <span class="word reveal">Your</span>
+      <span class="word reveal">Name.</span><br />
+      <span class="word reveal">Designer</span>
+      <span class="word reveal">&amp;</span>
+      <span class="word reveal">developer.</span>
+    </h1>
+    <p class="hero__sub reveal">I build things across web, product, and brand — swap this line for your own tagline.</p>
+    <a href="#work" class="hero__cta reveal">View the work ↓</a>
+  </section>
+
+  <!-- ===== WORK ===== -->
+  <section class="work" id="work">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">Selected work</p>
+      <h2>A few different settings.</h2>
+    </div>
+
+    <div class="filters reveal">
+      <button class="filter is-active" data-filter="all">All</button>
+      <button class="filter" data-filter="web">Web</button>
+      <button class="filter" data-filter="mobile">Mobile</button>
+      <button class="filter" data-filter="brand">Brand</button>
+    </div>
+
+    <div class="grid" id="grid">
+      <article class="card reveal" data-tag="web">
+        <div class="card__media"></div>
+        <div class="card__body">
+          <p class="card__tag">Web</p>
+          <h3>Project One</h3>
+          <p>Short one-line description of what this project is and what you did.</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-tag="mobile">
+        <div class="card__media"></div>
+        <div class="card__body">
+          <p class="card__tag">Mobile</p>
+          <h3>Project Two</h3>
+          <p>Short one-line description of what this project is and what you did.</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-tag="brand">
+        <div class="card__media"></div>
+        <div class="card__body">
+          <p class="card__tag">Brand</p>
+          <h3>Project Three</h3>
+          <p>Short one-line description of what this project is and what you did.</p>
+        </div>
+      </article>
+
+      <article class="card reveal" data-tag="web">
+        <div class="card__media"></div>
+        <div class="card__body">
+          <p class="card__tag">Web</p>
+          <h3>Project Four</h3>
+          <p>Short one-line description of what this project is and what you did.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <p class="section__eyebrow reveal">About</p>
+      <h2 class="reveal">A short paragraph about who you are, what you're studying or working on, and the kind of work you like to make. Keep it to two or three sentences — this is the section people read when they want to know you're a real person, not just a grid of projects.</h2>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / FOOTER ===== -->
+  <footer class="contact" id="contact">
+    <p class="section__eyebrow reveal">Get in touch</p>
+    <h2 class="reveal">Let's build something.</h2>
+    <a href="mailto:you@example.com" class="contact__email reveal">you@example.com</a>
+    <div class="contact__links reveal">
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="contact__foot">© <span id="year"></span> Your Name</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
