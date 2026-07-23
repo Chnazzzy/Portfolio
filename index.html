@@ -1,26 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lale Muhamad — Portfolio</title>
+  <meta name="description" content="Portfolio of Lale Muhamad" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-<title>Lale Muhamad</title>
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <a href="#top" class="nav__logo">LM</a>
+    <div class="nav__links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<a href="mailto:lale.muhamad@outlook.com">
-lale.muhamad@outlook.com
-</a>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero__glow"></div>
+    <p class="hero__eyebrow reveal">Portfolio</p>
+    <h1 class="hero__headline">
+      <span class="word reveal">Lale</span>
+      <span class="word reveal">Muhamad.</span><br />
+    </h1>
+    <p class="hero__sub reveal">wtf am i doing</p>
+    <a href="#work" class="hero__cta reveal">yuh</a>
+  </section>
 
+  <!-- ===== WORK ===== -->
+  <section class="work" id="work">
+    <div class="section__head reveal">
+      <p class="section__eyebrow">so called projects</p>
+      <h2>the stuff</h2>
+    </div>
 
-</section>
+    <div class="filters reveal">
+      <button class="filter is-active" data-filter="all">All</button>
+      <button class="filter" data-filter="one">one</button>
+      <button class="filter" data-filter="two">two</button>
+      <button class="filter" data-filter="three">three</button>
+    </div>
 
+    <div class="grid" id="grid">
+      <article class="card reveal" data-tag="one">
+        <div class="card__media"></div>
+        <div class="card__body">
+          <p class="card__tag">one</p>
+          <h3>Project One</h3>
+          <p>the video game</p>
+        </div>
+      </article>
 
+      <article class="card reveal" data-tag="two">
+        <div class="card__media"></div>
+        <div class="card__body">
+          <p class="card__tag">two</p>
+          <h3>Project Two</h3>
+          <p>the robotic hand</p>
+        </div>
+      </article>
 
-<footer>
+      <article class="card reveal" data-tag="three">
+        <div class="card__media"></div>
+        <div class="card__body">
+          <p class="card__tag">three</p>
+          <h3>idk</h3>
+          <p>whatever i decide to whip up</p>
+        </div>
+      </article>
+    </div>
+  </section>
 
-© 2026 Lale Muhamad
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <p class="section__eyebrow reveal">About</p>
+      <h2 class="reveal">glaze fest in here just yap</h2>
+    </div>
+  </section>
 
-</footer>
+  <!-- ===== CONTACT / FOOTER ===== -->
+  <footer class="contact" id="contact">
+    <p class="section__eyebrow reveal">touch me</p>
+    <h2 class="reveal">hire me plz</h2>
+    <a href="mailto:lale.muhamad@gmail.com" class="contact__email reveal">lale.muhamad@gmail.com</a>
+    <div class="contact__links reveal">
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="contact__foot">© <span id="year"></span> Lale Muhamad</p>
+  </footer>
 
-
+  <script src="script.js"></script>
 </body>
 </html>
