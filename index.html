@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- ===== NAV ===== -->
   <nav class="nav" id="nav">
     <a href="#top" class="nav__logo">LM</a>
     <div class="nav__links">
@@ -19,74 +17,85 @@
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
   <section class="hero" id="top">
-    <div class="hero__glow"></div>
-    <p class="hero__eyebrow reveal">Portfolio</p>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <p class="hero__eyebrow reveal">Digital maker / occasional chaos architect</p>
     <h1 class="hero__headline">
-      <span class="word reveal">Lale</span>
-      <span class="word reveal">Muhamad.</span><br />
+      <span class="word reveal">I build</span>
+      <span class="word reveal">things that</span>
+      <span class="word reveal">feel a little</span>
+      <span class="word reveal">more alive.</span>
     </h1>
-    <p class="hero__sub reveal">wtf am i doing</p>
-    <a href="#work" class="hero__cta reveal">yuh</a>
+    <p class="hero__sub reveal">I’m Lale — a designer and developer who likes turning odd ideas into playful, usable experiences.</p>
+    <div class="hero__actions reveal">
+      <a href="#work" class="hero__cta">See the experiments</a>
+      <a href="#about" class="hero__link">More about me</a>
+    </div>
   </section>
 
-  <!-- ===== WORK ===== -->
   <section class="work" id="work">
     <div class="section__head reveal">
-      <p class="section__eyebrow">so called projects</p>
-      <h2>the stuff</h2>
+      <p class="section__eyebrow">Selected experiments</p>
+      <h2>Small projects with personality.</h2>
     </div>
 
     <div class="filters reveal">
       <button class="filter is-active" data-filter="all">All</button>
-      <button class="filter" data-filter="one">one</button>
-      <button class="filter" data-filter="two">two</button>
-      <button class="filter" data-filter="three">three</button>
+      <button class="filter" data-filter="play">Play</button>
+      <button class="filter" data-filter="systems">Systems</button>
+      <button class="filter" data-filter="visuals">Visuals</button>
     </div>
 
     <div class="grid" id="grid">
-      <article class="card reveal" data-tag="one">
+      <article class="card card--play reveal" data-tag="play">
         <div class="card__media"></div>
         <div class="card__body">
-          <p class="card__tag">one</p>
-          <h3>Project One</h3>
-          <p>the video game</p>
+          <p class="card__tag">Play</p>
+          <h3>Arcade Moodboard</h3>
+          <p>A vibrant little web experience built around motion, texture, and surprise.</p>
         </div>
       </article>
 
-      <article class="card reveal" data-tag="two">
+      <article class="card card--systems reveal" data-tag="systems">
         <div class="card__media"></div>
         <div class="card__body">
-          <p class="card__tag">two</p>
-          <h3>Project Two</h3>
-          <p>the robotic hand</p>
+          <p class="card__tag">Systems</p>
+          <h3>Hand Prototype</h3>
+          <p>A mechanical concept translated into a tactile digital interface.</p>
         </div>
       </article>
 
-      <article class="card reveal" data-tag="three">
+      <article class="card card--visuals reveal" data-tag="visuals">
         <div class="card__media"></div>
         <div class="card__body">
-          <p class="card__tag">three</p>
-          <h3>idk</h3>
-          <p>whatever i decide to whip up</p>
+          <p class="card__tag">Visuals</p>
+          <h3>Night Shift Notes</h3>
+          <p>An experimental layout for ideas that feel like late-night sketches made real.</p>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
   <section class="about" id="about">
     <div class="about__inner">
       <p class="section__eyebrow reveal">About</p>
-      <h2 class="reveal">glaze fest in here just yap</h2>
+      <h2 class="reveal">I’m drawn to work that sits between utility and curiosity — the kind of projects that feel handmade, a little surprising, and worth lingering over.</h2>
+      <div class="about__grid">
+        <div class="about__panel reveal">
+          <h3>What I enjoy</h3>
+          <p>Interactive experiences, tactile interfaces, and weird-but-useful ideas.</p>
+        </div>
+        <div class="about__panel reveal">
+          <h3>Currently into</h3>
+          <p>Motion, web storytelling, and building things that feel personal rather than generic.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT / FOOTER ===== -->
   <footer class="contact" id="contact">
-    <p class="section__eyebrow reveal">touch me</p>
-    <h2 class="reveal">hire me plz</h2>
+    <p class="section__eyebrow reveal">Get in touch</p>
+    <h2 class="reveal">If you’ve got a strange idea, let’s make it real.</h2>
     <a href="mailto:lale.muhamad@gmail.com" class="contact__email reveal">lale.muhamad@gmail.com</a>
     <div class="contact__links reveal">
       <a href="#" target="_blank" rel="noopener">GitHub</a>

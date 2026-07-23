@@ -18,5 +18,20 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealEls.forEach((el) => revealObserver.observe(el));
 
-// ===== Footer year =====
+const filters = document.querySelectorAll('.filter');
+const cards = document.querySelectorAll('.card');
+
+filters.forEach((button) => {
+  button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+
+    filters.forEach((btn) => btn.classList.toggle('is-active', btn === button));
+
+    cards.forEach((card) => {
+      const matches = filter === 'all' || card.dataset.tag === filter;
+      card.classList.toggle('is-hidden', !matches);
+    });
+  });
+});
+
 document.getElementById('year').textContent = new Date().getFullYear();
