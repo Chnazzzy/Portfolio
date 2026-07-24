@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Robotic Hand — lale.uk</title>
+<title>Video Game — lale.uk</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,15 +13,32 @@
   <a class="back-link" href="index.html">&larr; Back</a>
 </header>
 
+<div class="stars" id="stars" aria-hidden="true"></div>
+<div class="leopard-bg" aria-hidden="true"></div>
+
 <section class="project-hero">
-  <span class="project-badge">Project 01</span>
-  <h1>Robotic Hand</h1>
+  <span class="project-badge">Project 02</span>
+  <h1>Video Game</h1>
   <p>
-    A build-in-progress. This page will document the process start to finish &mdash;
-    the wiring, the iterations, and what went wrong along the way. Not aiming for a
-    perfect result, just an honest record of building something hard.
+    A 2D fantasy game with quests to complete, built from scratch and published
+    for anyone to play. Details, screenshots, and a link to play it will land here
+    once it's ready.
   </p>
 </section>
 
+<script>
+  const starsHost = document.getElementById('stars');
+  const glyphs = ['\u2726','\u2727','\u2605','\u2739'];
+  for (let i = 0; i < 26; i++){
+    const s = document.createElement('span');
+    s.className = 'star';
+    s.textContent = glyphs[i % glyphs.length];
+    s.style.left = Math.random() * 100 + 'vw';
+    s.style.top = Math.random() * 100 + 'vh';
+    s.style.fontSize = (8 + Math.random() * 16) + 'px';
+    s.style.animationDelay = (Math.random() * 3.4) + 's';
+    starsHost.appendChild(s);
+  }
+</script>
 </body>
 </html>
