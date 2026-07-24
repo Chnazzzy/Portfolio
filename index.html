@@ -1,14 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robot</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>lale.uk</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <p>robot downloading..</p>
+<header>
+  <a class="wordmark" href="index.html">lale.uk</a>
+  <button id="contactBtn">Contact</button>
+</header>
+
+<section class="intro">
+  <h1>Hi, I'm Lale</h1>
+  <p>A-level student &middot; building things &middot; future engineer</p>
+  <div class="scroll-cue">scroll to meet the robot &darr;</div>
+</section>
+
+<div class="turn-section" id="turnSection">
+  <div class="stage-sticky">
+
+    <div class="fronds" aria-hidden="true">
+      <div class="frond-col left">
+        <div class="frond"></div><div class="frond"></div><div class="frond"></div><div class="frond"></div>
+        <div class="frond"></div><div class="frond"></div><div class="frond"></div><div class="frond"></div>
+      </div>
+      <div class="frond-col right">
+        <div class="frond"></div><div class="frond"></div><div class="frond"></div><div class="frond"></div>
+        <div class="frond"></div><div class="frond"></div><div class="frond"></div><div class="frond"></div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="robot" id="robot">
+
+        <div class="face front">
+          <div class="top-screen"><div class="bars"><span></span><span></span><span></span><span></span><span></span></div></div>
+          <div class="body-wrap">
+            <div class="side-arm"></div>
+            <div class="body-screen">
+              <div class="name-plate">Lale <span class="heart">&hearts;</span></div>
+              <div class="proj-row">
+                <a class="proj-btn" href="project-robotic-hand.html">Robotic<br>Hand</a>
+                <a class="proj-btn" href="project-video-game.html">Video<br>Game</a>
+              </div>
+            </div>
+            <div class="side-arm"></div>
+          </div>
+          <div class="tracks"><div></div><div></div><div></div><div></div></div>
+        </div>
+
+        <div class="face back">
+          <div class="top-screen"></div>
+          <div class="body-wrap">
+            <div class="side-arm"></div>
+            <div class="copyright-screen">
+              <span class="name">&copy; 2026</span>
+              <span class="c">Lale Mahmood</span>
+            </div>
+            <div class="side-arm"></div>
+          </div>
+          <div class="tracks"><div></div><div></div><div></div><div></div></div>
+
+          <div class="card-arm" id="cardArm">
+            <div class="arm-pole"></div>
+            <div class="contact-card">
+              <h3>Get in touch</h3>
+              <a href="mailto:you@example.com">you@example.com</a>
+              <a href="https://github.com/Chnazzzy" target="_blank" rel="noopener">github.com/Chnazzzy</a>
+              <span>Birmingham, UK</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const turnSection = document.getElementById('turnSection');
+  const robot = document.getElementById('robot');
+  const cardArm = document.getElementById('cardArm');
+  const contactBtn = document.getElementById('contactBtn');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function clamp(v,min,max){ return Math.max(min, Math.min(max, v)); }
+
+  let lastProgress = 0;
+  let revealTimer = null;
+
+  function updateTurn(){
+    const rect = turnSection.getBoundingClientRect();
+    const scrollable = turnSection.offsetHeight - window.innerHeight;
+    const progress = clamp(-rect.top / scrollable, 0, 1);
+    lastProgress = progress;
+
+    robot.style.transform = reduceMotion
+      ? `rotateY(${progress > 0.5 ? 180 : 0}deg)`
+      : `rotateY(${progress * 180}deg)`;
+
+    // if the robot scrolls back to mostly-front, drop the card so it
+    // doesn't float over the front face
+    if (progress < 0.45) cardArm.classList.remove('visible');
+  }
+
+  window.addEventListener('scroll', updateTurn, { passive: true });
+  window.addEventListener('resize', updateTurn);
+  updateTurn();
+
+  // clicking Contact turns the robot fully around (if it isn't already)
+  // then lifts the arm with the info card
+  contactBtn.addEventListener('click', () => {
+    const target = turnSection.offsetTop + turnSection.offsetHeight - window.innerHeight;
+    const alreadyTurned = lastProgress > 0.9;
+
+    if (!alreadyTurned){
+      window.scrollTo({ top: target, behavior: reduceMotion ? 'auto' : 'smooth' });
+    }
+
+    clearTimeout(revealTimer);
+    revealTimer = setTimeout(() => {
+      cardArm.classList.add('visible');
+    }, alreadyTurned ? 0 : 650);
+  });
+</script>
 
 </body>
 </html>
