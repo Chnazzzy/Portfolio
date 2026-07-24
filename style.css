@@ -67,7 +67,6 @@ button{
 .star{
     position:absolute;
     color:white;
-    text-shadow:0 0 10px var(--pink);
     animation:floatStar 5s infinite ease-in-out;
 }
 
@@ -110,9 +109,6 @@ header{
     font-size:1.5rem;
     font-weight:900;
     letter-spacing:3px;
-    text-shadow:
-    0 0 10px var(--pink),
-    0 0 20px var(--cyan);
 }
 
 #contactButton{
@@ -161,7 +157,6 @@ header{
 .intro-text h1{
     font-size:3.5rem;
     margin:20px 0;
-    text-shadow:0 0 15px var(--pink);
 }
 
 .intro-text p{
@@ -790,7 +785,6 @@ header{
 .section-title h2{
     margin-top:10px;
     font-size:3rem;
-    text-shadow:0 0 15px var(--pink);
 }
 
 
@@ -918,7 +912,6 @@ footer{
 .footer-logo{
     font-size:2rem;
     font-weight:bold;
-    text-shadow:0 0 10px var(--pink);
 }
 
 
