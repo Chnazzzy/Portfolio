@@ -31,3 +31,40 @@ if(contactBtn && contactSystem){
     });
 
 }
+// ================================
+// ABOUT ME SCREEN
+// ================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const mainScreen = document.getElementById("mainScreen");
+    const aboutSystem = document.getElementById("aboutSystem");
+    const closeAbout = document.getElementById("closeAbout");
+
+
+    console.log("About system:", aboutSystem);
+    console.log("Main screen:", mainScreen);
+
+
+    if(mainScreen && aboutSystem){
+
+        mainScreen.addEventListener("click", () => {
+
+            aboutSystem.classList.add("active");
+
+        });
+
+    }
+
+
+    if(closeAbout && aboutSystem){
+
+        closeAbout.addEventListener("click", () => {
+
+            aboutSystem.classList.remove("active");
+
+        });
+
+    }
+
+});
