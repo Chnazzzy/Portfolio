@@ -768,7 +768,27 @@ header{
     margin:120px auto;
 }
 
+.professional-joke{
+    position:absolute;
+    left:-170px;
+    top:120px;
+    color:white;
+    font-family:Tahoma, sans-serif;
+    font-size:.9rem;
+    font-style:italic;
+    transform:rotate(-8deg);
+}
 
+.professional-joke .arrow{
+    display:block;
+    font-size:2rem;
+    color:var(--pink);
+    margin-bottom:5px;
+}
+
+.journey{
+    position:relative;
+}
 .section-title{
     text-align:center;
     margin-bottom:50px;
