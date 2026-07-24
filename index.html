@@ -23,11 +23,14 @@
     <div class="stage">
       <div class="robot" id="robot">
 
-        <div class="face front">
-          <div class="top-screen">
+        <div class="top-screen">
+            <div class="bolt bolt-left"></div>
+            <div class="bolt bolt-right"></div>
+            <div class="speaker"></div>
             <div class="eye"></div>
             <div class="eye"></div>
-          </div>
+            <div class="led"></div>
+        </div>
           <div class="body-wrap">
             <div class="side-arm"></div>
             <div class="body-screen">
@@ -117,19 +120,29 @@
 
   let lastProgress = 0;
 
-  function updateTurn(){
-    robot.classList.remove('forced-turn');
+  let contactOpen = false;
+
+function updateTurn(){
+    if(contactOpen){
+        return;
+    }
     const rect = turnSection.getBoundingClientRect();
-    const scrollable = turnSection.offsetHeight - window.innerHeight;
-    const progress = clamp(-rect.top / scrollable, 0, 1);
+    const scrollable =
+        turnSection.offsetHeight -
+        window.innerHeight;
+    const progress = clamp(
+        -rect.top / scrollable,
+        0,
+        1
+    );
     lastProgress = progress;
-
     robot.style.transform = reduceMotion
-      ? `rotateY(${progress > 0.5 ? 180 : 0}deg)`
-      : `rotateY(${progress * 180}deg)`;
-
-    if (progress < 0.45) cardArm.classList.remove('visible');
-  }
+        ? `rotateY(${progress > 0.5 ? 180 : 0}deg)`
+        : `rotateY(${progress * 180}deg)`;
+    if(progress < 0.45){
+        cardArm.classList.remove("visible");
+    }
+}
 
   window.addEventListener('scroll', updateTurn, { passive: true });
   window.addEventListener('resize', updateTurn);
@@ -138,13 +151,19 @@
   // Contact: force the robot to face-back immediately (so it always
   // works, regardless of scroll math/timing) and lift the card,
   // then ease the page toward the back position too.
-  contactBtn.addEventListener('click', () => {
-    robot.classList.add('forced-turn');
-    cardArm.classList.add('visible');
-
-    const target = turnSection.offsetTop + turnSection.offsetHeight - window.innerHeight;
-    window.scrollTo({ top: target, behavior: reduceMotion ? 'auto' : 'smooth' });
-  });
+  contactBtn.addEventListener("click", () => {
+    contactOpen = true;
+    robot.classList.add("forced-turn");
+    cardArm.classList.add("visible");
+    const target =
+        turnSection.offsetTop +
+        turnSection.offsetHeight -
+        window.innerHeight;
+    window.scrollTo({
+        top: target,
+        behavior: reduceMotion ? "auto" : "smooth"
+    });
+});
 </script>
 
 </body>
