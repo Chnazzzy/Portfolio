@@ -3,20 +3,20 @@
   --bg-2: #123522;
   --leopard-base: #b0894d;
   --leopard-spot: #4a2f18;
-  --robot-body: #f3c9e6;
+  --robot-body: #315485;
   --robot-body-dark: #12508f;
   --outline: #07001f;
-  --screen: #fff8ea;
+  --screen: #cacffa;
   --screen-ink: #2c5392;
   --heart: #ff4f8b;
   --button: #c8f26a;
   --button-dark: #9fd93f;
   --track: #b8823f;
   --track-dark: #7a5322;
-  --back-top: #ffd25c;
-  --back-main: #ffdb85;
+  --back-top: #5286bd;
+  --back-main: #6093d7;
   --star: #fff4c2;
-  --ink: #fd0202;
+  --ink: #ffffff;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;}
