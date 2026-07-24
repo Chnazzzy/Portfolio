@@ -1,13 +1,13 @@
 :root{
   --bg: #0f2a1c;
   --bg-2: #123522;
-  --leopard-base: #e3c08a;
+  --leopard-base: #b0894d;
   --leopard-spot: #4a2f18;
   --robot-body: #f3c9e6;
-  --robot-body-dark: #e3aed4;
-  --outline: #7a4f68;
+  --robot-body-dark: #12508f;
+  --outline: #07001f;
   --screen: #fff8ea;
-  --screen-ink: #16311f;
+  --screen-ink: #2c5392;
   --heart: #ff4f8b;
   --button: #c8f26a;
   --button-dark: #9fd93f;
@@ -16,7 +16,7 @@
   --back-top: #ffd25c;
   --back-main: #ffdb85;
   --star: #fff4c2;
-  --ink: #fdf6ea;
+  --ink: #fd0202;
 }
 *{box-sizing:border-box;}
 html,body{margin:0;}
