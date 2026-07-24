@@ -1,70 +1,52 @@
-console.log("Lale portfolio loaded");
-// ================================
+console.log("Lale.OS portfolio loaded");
+
 // BOOT SCREEN
-// ================================
-
 window.addEventListener("load", () => {
-
     const bootScreen = document.getElementById("bootScreen");
 
     if (bootScreen) {
-
         setTimeout(() => {
-
             bootScreen.classList.add("hidden");
 
+            const message = document.getElementById("robotMessage");
+
+            if (message) {
+                message.classList.add("show");
+
+                setTimeout(() => {
+                    message.classList.remove("show");
+                }, 3000);
+            }
+
         }, 2200);
-
     }
-
 });
-const contactBtn = document.getElementById("contactBtn");
+
+
+// CONTACT CARD
+const contactButton = document.getElementById("contactButton");
 const contactSystem = document.getElementById("contactSystem");
 
-
-if(contactBtn && contactSystem){
-
-    contactBtn.addEventListener("click",()=>{
-
-        contactSystem.classList.add("active");
-
+if (contactButton && contactSystem) {
+    contactButton.addEventListener("click", () => {
+        contactSystem.classList.toggle("active");
     });
-
 }
-// ================================
-// ABOUT ME SCREEN
-// ================================
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const mainScreen = document.getElementById("mainScreen");
-    const aboutSystem = document.getElementById("aboutSystem");
-    const closeAbout = document.getElementById("closeAbout");
 
 
-    console.log("About system:", aboutSystem);
-    console.log("Main screen:", mainScreen);
+// ABOUT WINDOW
+const aboutScreen = document.getElementById("aboutScreen");
+const aboutSystem = document.getElementById("aboutSystem");
+const closeAbout = document.getElementById("closeAbout");
 
+if (aboutScreen && aboutSystem) {
+    aboutScreen.addEventListener("click", () => {
+        aboutSystem.classList.add("active");
+    });
+}
 
-    if(mainScreen && aboutSystem){
-
-        mainScreen.addEventListener("click", () => {
-
-            aboutSystem.classList.add("active");
-
-        });
-
-    }
-
-
-    if(closeAbout && aboutSystem){
-
-        closeAbout.addEventListener("click", () => {
-
-            aboutSystem.classList.remove("active");
-
-        });
-
-    }
-
-});
+if (closeAbout && aboutSystem) {
+    closeAbout.addEventListener("click", () => {
+        aboutSystem.classList.remove("active");
+    });
+}

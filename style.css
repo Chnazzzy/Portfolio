@@ -1,777 +1,412 @@
-/* ==================================================
+/* =========================================
    LALE.UK ROBOT PORTFOLIO
-   STYLE SYSTEM
-================================================== */
+   Y2K / MYSPACE STYLE
+========================================= */
 
-
-/* ==================================================
-   1. VARIABLES
-================================================== */
-
-
-:root {
-
-
-    /* Forest / Y2K palette */
-
-    --forest-dark: #061b14;
-    --forest: #0b3022;
-    --forest-light: #164b35;
-
-
-    /* Robot colours */
-
-    --plastic: #8bb8d8;
-    --plastic-dark: #345d82;
-    --chrome: #d9e4ea;
-    --chrome-shadow: #7d919d;
-
-
-    /* Screen */
-
-    --screen: #b9f4d7;
-    --screen-dark: #3db889;
-    --screen-text: #073a2b;
-
-
-    /* Accent */
-
-    --lime: #c9ff63;
-    --pink: #ff6fae;
-    --blue: #65d7ff;
-
-
-    /* UI */
-
-    --white: #ffffff;
-    --black: #07100d;
-
-    --outline: #020806;
-
-
-    /* Effects */
-
-    --glow:
-    0 0 15px rgba(201,255,99,.5);
-
-
-    --shadow:
-    0 20px 60px rgba(0,0,0,.45);
-
-
+:root{
+    --forest:#08291d;
+    --forest-dark:#03140d;
+    --green:#174f35;
+    --pink:#ff72b6;
+    --lime:#caff63;
+    --cyan:#75eaff;
+    --silver:#dcecff;
+    --chrome:#8fb9d8;
+    --screen:#baffdf;
+    --ink:#052b20;
+    --outline:#020604;
+    --white:#fff;
+    --shadow:0 20px 50px rgba(0,0,0,.5);
 }
 
-
-
-
-
-
-
-/* ==================================================
-   2. RESET
-================================================== */
-
-
-* {
-
+*{
     box-sizing:border-box;
     margin:0;
     padding:0;
-
 }
 
-
-html {
-
+html{
     scroll-behavior:smooth;
-
 }
 
-
-
-body {
-
-
+body{
     min-height:100vh;
-
     overflow-x:hidden;
-
-
-    font-family:
-    Tahoma,
-    Verdana,
-    Arial,
-    sans-serif;
-
-
-    color:var(--white);
-
-
+    font-family:Tahoma,Verdana,Arial,sans-serif;
+    color:white;
     background:
-
-
-    radial-gradient(
-        circle at top,
-        #164b35,
-        transparent 40%
-    ),
-
-
-    linear-gradient(
-        180deg,
-        var(--forest),
-        var(--forest-dark)
-    );
-
-
+    radial-gradient(circle at top,#1b6143,transparent 40%),
+    linear-gradient(180deg,var(--forest),var(--forest-dark));
 }
 
-
-
-
-
-
-a {
-
+a{
     color:inherit;
     text-decoration:none;
-
 }
 
-
-
-
-button {
-
+button{
     font-family:inherit;
-
-}
-
-
-
-
-
-
-
-/* ==================================================
-   3. BACKGROUND EFFECTS
-================================================== */
-
-
-
-#stars {
-
-
-    position:fixed;
-
-    inset:0;
-
-    z-index:-5;
-
-    pointer-events:none;
-
-
-    overflow:hidden;
-
-
-}
-
-
-
-.star {
-
-
-    position:absolute;
-
-
-    color:white;
-
-
-    opacity:.8;
-
-
-    text-shadow:
-    0 0 8px white;
-
-
-    animation:
-    floatStar 5s infinite ease-in-out;
-
-
-}
-
-
-
-
-
-
-#sparkles {
-
-
-    position:fixed;
-
-    inset:0;
-
-    z-index:-4;
-
-    pointer-events:none;
-
-
-}
-
-
-
-
-
-/* subtle leopard print */
-
-body::before {
-
-
-    content:"";
-
-
-    position:fixed;
-
-
-    inset:0;
-
-
-    opacity:.08;
-
-
-    pointer-events:none;
-
-
-    background:
-
-
-    radial-gradient(
-        ellipse,
-        #3b2412 0 20%,
-        transparent 22%
-    );
-
-
-    background-size:
-    90px 70px;
-
-
-}
-
-
-
-
-
-
-/* ==================================================
-   4. HEADER
-================================================== */
-
-
-header {
-
-
-    position:fixed;
-
-
-    top:0;
-
-
-    left:0;
-
-
-    width:100%;
-
-
-    padding:
-    25px 40px;
-
-
-    display:flex;
-
-
-    justify-content:space-between;
-
-
-    align-items:center;
-
-
-    z-index:100;
-
-
-}
-
-
-
-
-
-.logo {
-
-
-    font-size:1.4rem;
-
-
-    font-weight:900;
-
-
-    letter-spacing:2px;
-
-
-    color:white;
-
-
-    text-shadow:
-    0 0 10px rgba(255,255,255,.5);
-
-
-}
-
-
-
-
-
-.header-buttons button {
-
-
     cursor:pointer;
+}
 
 
-    border:
+/* =========================================
+   BACKGROUND
+========================================= */
 
+#stars,#sparkles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
 
-    2px solid var(--lime);
+#stars{
+    z-index:-2;
+}
 
-
-
-    background:
-
-
-    rgba(0,0,0,.3);
-
-
-
+.star{
+    position:absolute;
     color:white;
+    text-shadow:0 0 10px var(--pink);
+    animation:floatStar 5s infinite ease-in-out;
+}
 
-
-    padding:
-
-    10px 25px;
-
-
-    border-radius:30px;
-
-
-    font-weight:bold;
-
-
-    transition:.3s;
-
-
+@keyframes floatStar{
+    50%{
+        transform:translateY(-20px) rotate(20deg);
+        opacity:1;
+    }
 }
 
 
-
-
-
-
-.header-buttons button:hover {
-
-
-    background:var(--lime);
-
-
-    color:black;
-
-
-    transform:
-    translateY(-3px);
-
-
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    opacity:.1;
+    pointer-events:none;
+    background-image:
+    radial-gradient(#5b351b 20%,transparent 22%);
+    background-size:90px 70px;
 }
 
 
+/* =========================================
+   HEADER
+========================================= */
 
-
-
-
-
-
-/* ==================================================
-   5. ROBOT PAGE
-================================================== */
-
-
-.robot-page {
-
-
-    min-height:100vh;
-
-
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:25px 40px;
     display:flex;
-
-
-    justify-content:center;
-
-
+    justify-content:space-between;
     align-items:center;
+    z-index:50;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:900;
+    letter-spacing:3px;
+    text-shadow:
+    0 0 10px var(--pink),
+    0 0 20px var(--cyan);
+}
+
+#contactButton{
+    padding:10px 25px;
+    border:3px solid var(--lime);
+    border-radius:30px;
+    background:rgba(0,0,0,.4);
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#contactButton:hover{
+    background:var(--lime);
+    color:black;
+    transform:translateY(-3px);
+}
 
 
+/* =========================================
+   MAIN ROBOT AREA
+========================================= */
+
+.robot-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     position:relative;
-
-
     padding-top:80px;
-
-
 }
 
-
-
-
-
-
-.intro-text {
-
-
+.intro-text{
     position:absolute;
-
-
-    top:140px;
-
-
     left:8%;
-
-
-    width:300px;
-
-
+    top:160px;
+    width:280px;
 }
 
-
-
-
-
-.status {
-
-
+.status{
     color:var(--lime);
-
-
-    font-size:.85rem;
-
-
-    letter-spacing:2px;
-
-
-    margin-bottom:20px;
-
-
+    letter-spacing:3px;
+    font-size:.8rem;
 }
 
-
-
-
-
-
-.intro-text h1 {
-
-
-    font-size:3rem;
-
-
-    line-height:1;
-
-
-    margin-bottom:20px;
-
-
+.intro-text h1{
+    font-size:3.5rem;
+    margin:20px 0;
+    text-shadow:0 0 15px var(--pink);
 }
 
-
-
-.intro-text p {
-
-
+.intro-text p{
     line-height:1.6;
-
-
     opacity:.85;
-
-
 }
 
 
+/* =========================================
+   ROBOT
+========================================= */
 
-
-
-
-/* ==================================================
-   6. ROBOT STAGE
-================================================== */
-
-
-.robot-container {
-
-
-    width:700px;
-
-
-    height:800px;
-
-
+.robot-container{
+    width:600px;
+    height:700px;
     perspective:1500px;
-
-
 }
 
-
-
-.robot {
-
-
+.robot{
+    width:100%;
+    height:100%;
     position:relative;
-
-
-    width:100%;
-
-
-    height:100%;
-
-
     transform-style:preserve-3d;
-
-
-    transition:
-    transform 1s ease;
-
-
+    transition:1s;
+    animation:robotFloat 4s infinite ease-in-out;
 }
 
+@keyframes robotFloat{
+    50%{
+        transform:translateY(-15px);
+    }
+}
 
-
-
-
-
-.robot-side {
-
-
+.robot-side{
     position:absolute;
-
-
-    width:100%;
-
-
-    height:100%;
-
-
+    inset:0;
     backface-visibility:hidden;
-
-
 }
 
-
-
-
-
-
-.front {
-
-
-    transform:
-    rotateY(0deg);
-
-
+.back{
+    transform:rotateY(180deg);
 }
 
-
-
-.back {
-
-
-    transform:
-    rotateY(180deg);
-
-
+.front{
+    transform:rotateY(0deg);
 }
-
-
-
-
-
-
-.robot-container:hover .robot {
-
-
-    transform:
-    rotateY(5deg);
-
-
-}
-/* ==================================================
-   6. ROBOT HEAD
-================================================== */
+/* =========================================
+   ROBOT HEAD
+========================================= */
 
 .robot-head{
     width:55%;
     height:150px;
     margin:auto;
-    background:linear-gradient(#dcecff,#7ea9c9);
-    border:6px solid var(--outline);
-    border-radius:60px 60px 30px 30px;
-    box-shadow:inset 0 -15px 25px rgba(0,0,0,.25),var(--shadow);
     position:relative;
+    background:linear-gradient(#fff,var(--chrome));
+    border:6px solid var(--outline);
+    border-radius:70px 70px 35px 35px;
+    box-shadow:var(--shadow),inset 0 -20px 30px rgba(0,0,0,.2);
 }
 
 .bolt{
-    width:16px;
-    height:16px;
-    background:var(--chrome-shadow);
-    border:3px solid var(--outline);
-    border-radius:50%;
+    width:18px;
+    height:18px;
     position:absolute;
-    top:20px;
+    top:25px;
+    border-radius:50%;
+    background:linear-gradient(#fff,#788d9b);
+    border:3px solid var(--outline);
 }
 
-.bolt-left{left:20px;}
-.bolt-right{right:20px;}
+.bolt-left{
+    left:25px;
+}
+
+.bolt-right{
+    right:25px;
+}
+
+
+/* =========================================
+   EYES
+========================================= */
 
 .eyes{
     height:100%;
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:50px;
+    gap:45px;
 }
 
 .eye{
-    width:45px;
-    height:55px;
+    width:50px;
+    height:60px;
+    position:relative;
+    overflow:hidden;
     background:white;
     border:5px solid var(--outline);
     border-radius:50%;
-    position:relative;
     animation:blink 5s infinite;
 }
 
 .pupil{
-    width:18px;
-    height:18px;
-    background:#0b3022;
-    border-radius:50%;
+    width:20px;
+    height:20px;
     position:absolute;
-    top:18px;
+    top:20px;
     left:12px;
+    background:#073a2b;
+    border-radius:50%;
+    transition:.3s;
+}
+
+.eye:hover .pupil{
+    transform:translateX(8px);
+}
+
+@keyframes blink{
+    0%,92%,100%{
+        transform:scaleY(1);
+    }
+    95%{
+        transform:scaleY(.1);
+    }
 }
 
 
-/* ==================================================
-   7. ROBOT BODY
-================================================== */
+/* =========================================
+   ROBOT BODY
+========================================= */
 
 .robot-body{
-    height:430px;
+    height:420px;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     gap:15px;
 }
 
 .robot-arm{
-    width:80px;
+    width:75px;
     height:230px;
-    background:linear-gradient(90deg,#547b9b,#b8d9ef,#547b9b);
+    position:relative;
+    background:linear-gradient(90deg,#557993,#fff,#557993);
     border:6px solid var(--outline);
     border-radius:40px;
-    position:relative;
 }
 
-.robot-arm .joint{
+.joint{
     width:45px;
     height:45px;
-    background:var(--chrome);
-    border:5px solid var(--outline);
-    border-radius:50%;
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
+    border-radius:50%;
+    background:var(--silver);
+    border:5px solid var(--outline);
 }
 
 
-/* ==================================================
-   8. MAIN SCREEN
-================================================== */
+/* =========================================
+   MAIN SCREEN
+========================================= */
 
 .main-screen{
-    width:380px;
+    width:390px;
     height:300px;
-    background:linear-gradient(#7daed1,#416987);
+    padding:25px;
+    position:relative;
+    background:linear-gradient(#d8efff,#527a99);
     border:8px solid var(--outline);
     border-radius:35px;
-    padding:25px;
     box-shadow:inset 0 -20px 30px rgba(0,0,0,.25);
 }
+
 
 .screen{
     width:100%;
     height:190px;
-    border-radius:20px;
+    position:relative;
+    overflow:hidden;
     border:5px solid var(--outline);
-    background:
-    linear-gradient(135deg,#d7fff0,#74d8b2);
+    border-radius:20px;
     cursor:pointer;
-    padding:0;
-    font-family:inherit;
-    appearance:none;
-    -webkit-appearance:none;
-    border:none;
-    padding:0;
-    margin:0;
-    background:none;
-    cursor:pointer;
-    font-family:inherit;
+    background:linear-gradient(135deg,#dcfff0,var(--screen));
+    transition:.3s;
 }
+
+.screen:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 25px var(--lime);
+}
+
+.screen:active{
+    transform:scale(.97);
 }
 
 
 .screen-glare{
-    position:absolute;
-    width:100px;
+    width:80px;
     height:300px;
-    background:white;
-    opacity:.25;
-    transform:rotate(30deg);
-    left:40px;
+    position:absolute;
     top:-80px;
+    left:40px;
+    background:white;
+    opacity:.35;
+    transform:rotate(35deg);
 }
+
 
 .screen-content{
     position:relative;
     z-index:2;
+    padding-top:30px;
     text-align:center;
-    color:var(--screen-text);
-    padding-top:35px;
+    color:var(--ink);
 }
 
 .boot{
-    font-size:.8rem;
-    letter-spacing:3px;
+    font-size:.75rem;
+    letter-spacing:4px;
 }
 
 .screen-content h2{
-    font-size:2.4rem;
     margin:20px 0;
+    font-size:2.4rem;
 }
 
 .click-text{
-    font-size:.7rem;
+    font-size:.75rem;
     animation:pulse 2s infinite;
 }
 
+@keyframes pulse{
+    50%{
+        opacity:.4;
+    }
+}
 
-/* ==================================================
-   9. PROJECT BUTTONS
-================================================== */
+
+/* =========================================
+   PROJECT BUTTONS
+========================================= */
 
 .project-buttons{
     display:flex;
@@ -781,52 +416,60 @@ header {
 }
 
 .project-buttons a{
-    width:75px;
-    height:75px;
-    background:var(--lime);
-    color:#102000;
-    border:5px solid var(--outline);
-    border-radius:50%;
+    width:80px;
+    height:80px;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    font-weight:bold;
     font-size:.75rem;
+    font-weight:bold;
+    color:#102000;
+    background:linear-gradient(#d7ff72,#8ddb3b);
+    border:5px solid var(--outline);
+    border-radius:50%;
     transition:.3s;
-}
-
-.project-buttons span{
-    font-size:.7rem;
 }
 
 .project-buttons a:hover{
     transform:translateY(-8px) rotate(-5deg);
-    box-shadow:var(--glow);
+    box-shadow:0 0 25px var(--lime);
+}
+
+.project-buttons span{
+    font-size:.65rem;
 }
 
 
-/* ==================================================
-   10. ROBOT DETAILS
-================================================== */
+/* =========================================
+   ROBOT DETAILS
+========================================= */
 
 .robot-speaker{
     width:80px;
     height:15px;
-    background:#222;
     margin:20px auto;
     border-radius:10px;
+    background:#222;
 }
 
 .robot-led{
     width:14px;
     height:14px;
-    background:#6dff75;
-    border-radius:50%;
     margin:auto;
-    box-shadow:0 0 20px #6dff75;
+    border-radius:50%;
+    background:#74ff6d;
+    box-shadow:0 0 20px #74ff6d;
+    animation:led 2s infinite;
 }
+
+@keyframes led{
+    50%{
+        opacity:.4;
+    }
+}
+
 
 .robot-tracks{
     display:flex;
@@ -837,51 +480,40 @@ header {
 .robot-tracks div{
     width:70px;
     height:35px;
-    background:#4b3524;
     border:5px solid var(--outline);
     border-radius:15px;
+    background:#4b3524;
 }
-
-
-/* ==================================================
-   ANIMATIONS
-================================================== */
-
-@keyframes blink{
-    0%,92%,100%{transform:scaleY(1);}
-    95%{transform:scaleY(.1);}
-}
-
-@keyframes pulse{
-    50%{opacity:.4;}
-}
-/* ==================================================
-   11. BACK OF ROBOT
-================================================== */
+/* =========================================
+   BACK OF ROBOT
+========================================= */
 
 .back .robot-head{
-    background:linear-gradient(#b9d7e8,#6089a5);
+    background:linear-gradient(#d9efff,#769ab5);
 }
 
+
 .back-screen{
-    width:430px;
+    width:390px;
     height:300px;
-    background:linear-gradient(#8bd1bd,#3d8d73);
-    border:8px solid var(--outline);
-    border-radius:35px;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    color:var(--screen-text);
+    color:var(--ink);
+    background:linear-gradient(#baffdf,#55b991);
+    border:8px solid var(--outline);
+    border-radius:35px;
     box-shadow:inset 0 -20px 30px rgba(0,0,0,.2);
 }
+
 
 .back-screen h2{
     font-size:3rem;
 }
 
 .back-screen p{
+    margin-top:10px;
     font-size:1.4rem;
     font-weight:bold;
 }
@@ -894,24 +526,33 @@ header {
 
 
 
-/* ==================================================
-   12. CONTACT ARM
-================================================== */
+/* =========================================
+   CONTACT ARM SYSTEM
+========================================= */
 
 .contact-system{
     position:absolute;
-    right:-120px;
-    top:200px;
+    right:5%;
+    top:50%;
     opacity:0;
-    transform:translateY(50px) scale(.8);
     pointer-events:none;
-    transition:.6s cubic-bezier(.2,1.5,.4,1);
+    transform:translateY(40px) scale(.8);
+    transition:.6s cubic-bezier(.2,1.4,.4,1);
+    z-index:20;
 }
+
 
 .contact-system.active{
     opacity:1;
-    transform:translateY(0) scale(1);
     pointer-events:auto;
+    transform:translateY(0) scale(1);
+}
+
+
+.robot-contact-arm{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 
@@ -919,519 +560,45 @@ header {
     display:flex;
     flex-direction:column;
     align-items:center;
+    animation:armPop .8s ease;
 }
+
 
 .arm-piece{
-    width:18px;
+    width:20px;
     height:90px;
-    background:linear-gradient(90deg,#555,#ddd,#555);
+    background:linear-gradient(90deg,#666,#fff,#666);
     border:4px solid var(--outline);
 }
+
 
 .arm-joint{
-    width:45px;
-    height:45px;
+    width:50px;
+    height:50px;
     border-radius:50%;
-    background:var(--chrome);
+    background:var(--silver);
     border:5px solid var(--outline);
 }
 
 
-.glitter-holder{
-    color:#fff;
-    font-size:1.4rem;
-    text-align:center;
-    animation:sparkle 1s infinite;
-}
-
-
-
-.contact-card{
-    width:260px;
-    background:#fff;
-    color:#15251f;
-    padding:20px;
-    border-radius:15px;
-    border:5px solid var(--outline);
-    box-shadow:10px 10px 0 rgba(0,0,0,.5);
-    margin-top:10px;
-}
-
-
-.card-top{
-    background:#111;
-    color:var(--lime);
-    padding:8px;
-    font-weight:bold;
-    text-align:center;
-    letter-spacing:3px;
-}
-
-
-.contact-card h3{
-    margin:15px 0;
-    color:#164b35;
-}
-
-
-.contact-card a{
-    display:block;
-    color:#164b35;
-    margin:10px 0;
-    font-size:.85rem;
-    word-break:break-word;
-}
-
-
-.online-status{
-    margin-top:15px;
-    color:#16832b;
-    font-weight:bold;
-}
-
-
-
-/* ==================================================
-   13. ABOUT WINDOWS XP PANEL
-================================================== */
-
-
-.about-system{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.55);
-    z-index:200;
-    justify-content:center;
-    align-items:center;
-}
-
-
-.about-system.active{
-    display:flex;
-}
-
-
-.xp-window{
-    width:min(700px,90%);
-    background:#d9e8f5;
-    color:#111;
-    border:5px solid #315485;
-    border-radius:10px;
-    box-shadow:20px 20px 50px #000;
-}
-
-
-.window-header{
-    height:45px;
-    background:linear-gradient(#5b9bd5,#24588a);
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 15px;
-    font-weight:bold;
-}
-
-
-.window-header button{
-    background:#e94b4b;
-    border:2px solid #fff;
-    color:white;
-    width:25px;
-    height:25px;
-    cursor:pointer;
-}
-
-
-.window-content{
-    display:flex;
-    gap:30px;
-    padding:30px;
-}
-
-
-.profile-avatar{
-    width:150px;
-    height:150px;
-    background:#164b35;
-    border-radius:10px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-
-.mini-robot{
-    font-size:4rem;
-}
-
-
-.profile-text h2{
-    color:#164b35;
-    margin-bottom:15px;
-}
-
-
-.profile-text p{
-    line-height:1.5;
-    margin-bottom:12px;
-}
-
-
-.profile-info{
-    margin-top:20px;
-}
-
-
-.profile-info div{
-    background:white;
-    padding:10px;
-    margin-bottom:8px;
-    border-radius:8px;
-}
-
-
-.profile-info strong{
-    display:block;
-    color:#315485;
-}
-/* ==================================================
-   14. PROJECT SECTION
-================================================== */
-
-.projects,
-.journey,
-.skills{
-    width:min(1100px,90%);
-    margin:120px auto;
-}
-
-
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-
-.section-title span{
-    color:var(--lime);
-    font-size:.75rem;
-    letter-spacing:4px;
-}
-
-
-.section-title h2{
-    font-size:3rem;
-    margin-top:10px;
-}
-
-
-
-.project-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
-
-
-
-.project-card{
-    background:
-    linear-gradient(145deg,#164b35,#092219);
-    border:4px solid var(--outline);
-    border-radius:25px;
-    padding:30px;
-    min-height:330px;
-    box-shadow:var(--shadow);
-    transition:.3s;
-    position:relative;
-    overflow:hidden;
-}
-
-
-.project-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 30px rgba(201,255,99,.3);
-}
-
-
-.project-card::after{
-    content:"";
-    position:absolute;
-    width:150px;
-    height:150px;
-    background:white;
-    opacity:.05;
-    border-radius:50%;
-    top:-50px;
-    right:-50px;
-}
-
-
-.project-number{
-    color:var(--lime);
-    font-weight:bold;
-    font-size:2rem;
-}
-
-
-.project-card h3{
-    font-size:1.8rem;
-    margin:20px 0;
-}
-
-
-.project-card p{
-    line-height:1.6;
-    opacity:.85;
-}
-
-
-.project-tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin:20px 0;
-}
-
-
-.project-tags span{
-    background:var(--lime);
-    color:#102000;
-    padding:5px 12px;
-    border-radius:20px;
-    font-size:.75rem;
-    font-weight:bold;
-}
-
-
-.project-card a{
-    color:var(--blue);
-    font-weight:bold;
-}
-
-
-.future{
-    opacity:.7;
-}
-
-
-.locked{
-    color:var(--pink);
-    margin-top:30px;
-    letter-spacing:3px;
-}
-
-
-
-/* ==================================================
-   15. JOURNEY TIMELINE
-================================================== */
-
-
-.timeline{
-    position:relative;
-    padding-left:40px;
-}
-
-
-.timeline::before{
-    content:"";
-    position:absolute;
-    left:15px;
-    top:0;
-    height:100%;
-    width:4px;
-    background:var(--lime);
-}
-
-
-.timeline-item{
-    display:flex;
-    gap:30px;
-    margin-bottom:50px;
-}
-
-
-
-.timeline-icon{
-    width:35px;
-    height:35px;
-    background:var(--lime);
-    color:#111;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-weight:bold;
-    position:relative;
-    z-index:2;
-}
-
-
-
-.timeline-content{
-    background:rgba(255,255,255,.08);
-    border:2px solid rgba(255,255,255,.15);
-    padding:25px;
-    border-radius:20px;
-    flex:1;
-}
-
-
-.timeline-content h3{
-    margin-bottom:10px;
-}
-
-
-
-/* ==================================================
-   16. SKILLS
-================================================== */
-
-
-.skill-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:20px;
-}
-
-
-.skill-card{
-    height:90px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:
-    linear-gradient(#b8d9ef,#547b9b);
-    color:#07100d;
-    font-weight:bold;
-    border:4px solid var(--outline);
-    border-radius:20px;
-    transition:.3s;
-}
-
-
-.skill-card:hover{
-    transform:scale(1.08) rotate(-3deg);
-    background:var(--lime);
-}
-
-
-
-/* ==================================================
-   17. FOOTER
-================================================== */
-
-
-footer{
-    width:90%;
-    margin:100px auto 40px;
-    padding:40px;
-    border-top:2px solid rgba(255,255,255,.2);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:30px;
-}
-
-
-
-.footer-logo{
-    font-size:2rem;
-    font-weight:bold;
-}
-
-
-.footer-links{
-    display:flex;
-    gap:20px;
-}
-
-
-.footer-links a{
-    color:var(--blue);
-}
-
-
-.footer-copy{
-    text-align:right;
-    opacity:.7;
-    font-size:.85rem;
-}
-/* ==================================================
-   18. Y2K FLOATING DECORATIONS
-================================================== */
-
-.floating-star,
-.floating-heart,
-.floating-diamond{
-    position:fixed;
-    z-index:-1;
-    pointer-events:none;
-    animation:float 6s infinite ease-in-out;
-    text-shadow:0 0 15px white;
-}
-
-.star-one{
-    top:20%;
-    left:10%;
-    color:#fff;
-    font-size:3rem;
-}
-
-.star-two{
-    top:70%;
-    right:15%;
-    color:var(--lime);
-    font-size:2rem;
-    animation-delay:2s;
-}
-
-.star-three{
-    top:35%;
-    right:8%;
-    color:#65d7ff;
-    font-size:2.5rem;
-    animation-delay:1s;
-}
-
-.floating-heart{
-    bottom:15%;
-    left:8%;
-    color:var(--pink);
-    font-size:3rem;
-}
-
-.floating-diamond{
-    top:50%;
-    left:4%;
-    color:white;
-    font-size:2rem;
-}
-
-
-
-@keyframes float{
-    0%,100%{
-        transform:translateY(0) rotate(0deg);
+@keyframes armPop{
+    from{
+        transform:translateY(-100px);
     }
-    50%{
-        transform:translateY(-25px) rotate(20deg);
+    to{
+        transform:translateY(0);
     }
 }
 
 
-
-
-/* ==================================================
-   19. GLITTER
-================================================== */
+/* Glitter */
 
 .glitter-holder{
-    animation:
-    sparkle .8s infinite alternate;
+    margin:10px;
+    color:var(--pink);
+    font-size:1.6rem;
+    letter-spacing:8px;
+    animation:sparkle .8s infinite alternate;
 }
 
 
@@ -1448,21 +615,417 @@ footer{
 
 
 
+/* Contact card */
 
-/* ==================================================
-   20. BOOT SCREEN
-================================================== */
+.contact-card{
+    width:270px;
+    padding:20px;
+    color:#14251d;
+    background:white;
+    border:5px solid var(--outline);
+    border-radius:15px;
+    box-shadow:10px 10px 0 rgba(0,0,0,.5);
+}
 
+
+.card-top{
+    padding:8px;
+    text-align:center;
+    font-weight:bold;
+    letter-spacing:3px;
+    color:var(--lime);
+    background:#111;
+}
+
+
+.contact-card h3{
+    margin:15px 0;
+    color:var(--green);
+}
+
+
+.contact-card a{
+    display:block;
+    margin:10px 0;
+    color:#164f35;
+    font-size:.85rem;
+    word-break:break-word;
+}
+
+
+.online-status{
+    margin-top:15px;
+    color:#15933c;
+    font-weight:bold;
+}
+
+
+
+
+/* =========================================
+   WINDOWS XP ABOUT POPUP
+========================================= */
+
+
+.about-system{
+    position:fixed;
+    inset:0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,.6);
+    z-index:200;
+}
+
+
+.about-system.active{
+    display:flex;
+}
+
+
+.xp-window{
+    width:min(700px,90%);
+    overflow:hidden;
+    color:#111;
+    background:#dcecff;
+    border:5px solid #315485;
+    border-radius:10px;
+    box-shadow:20px 20px 60px black;
+}
+
+
+.window-header{
+    height:45px;
+    padding:0 15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+    font-weight:bold;
+    background:linear-gradient(#6bb4ff,#24588a);
+}
+
+
+.window-header button{
+    width:25px;
+    height:25px;
+    color:white;
+    background:#e74747;
+    border:2px solid white;
+}
+
+
+.window-content{
+    display:flex;
+    gap:30px;
+    padding:30px;
+}
+
+
+.profile-avatar{
+    width:140px;
+    height:140px;
+    flex-shrink:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:15px;
+    background:var(--green);
+}
+
+
+.mini-robot{
+    font-size:4rem;
+}
+
+
+.profile-text h2{
+    margin-bottom:15px;
+    color:var(--green);
+}
+
+
+.profile-text p{
+    margin-bottom:12px;
+    line-height:1.5;
+}
+
+
+.profile-info div{
+    margin-top:10px;
+    padding:10px;
+    border-radius:8px;
+    background:white;
+}
+
+
+.profile-info strong{
+    display:block;
+    color:#315485;
+}
+/* =========================================
+   JOURNEY / SKILLS SECTIONS
+========================================= */
+
+.journey,
+.skills{
+    width:min(1000px,90%);
+    margin:120px auto;
+}
+
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+
+.section-title span{
+    color:var(--lime);
+    letter-spacing:4px;
+    font-size:.75rem;
+}
+
+
+.section-title h2{
+    margin-top:10px;
+    font-size:3rem;
+    text-shadow:0 0 15px var(--pink);
+}
+
+
+
+/* =========================================
+   JOURNEY TIMELINE
+========================================= */
+
+.timeline{
+    position:relative;
+    padding-left:40px;
+}
+
+
+.timeline:before{
+    content:"";
+    position:absolute;
+    left:15px;
+    top:0;
+    height:100%;
+    width:4px;
+    background:var(--lime);
+    box-shadow:0 0 15px var(--lime);
+}
+
+
+.timeline-item{
+    display:flex;
+    gap:25px;
+    margin-bottom:45px;
+}
+
+
+.timeline-icon{
+    width:35px;
+    height:35px;
+    flex-shrink:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    color:#111;
+    font-weight:bold;
+    background:var(--lime);
+    z-index:2;
+}
+
+
+.timeline-content{
+    flex:1;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    border:2px solid rgba(255,255,255,.15);
+}
+
+
+.timeline-content h3{
+    margin-bottom:10px;
+    color:var(--pink);
+}
+
+
+.timeline-content p{
+    line-height:1.6;
+    opacity:.9;
+}
+
+
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skill-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+
+
+.skill-card{
+    height:90px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:4px solid var(--outline);
+    border-radius:20px;
+    color:#07100d;
+    font-weight:bold;
+    background:
+    linear-gradient(#fff,var(--silver));
+    transition:.3s;
+}
+
+
+.skill-card:hover{
+    transform:
+    translateY(-8px)
+    rotate(-3deg);
+
+    background:var(--lime);
+    box-shadow:0 0 20px var(--lime);
+}
+
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+    width:90%;
+    margin:100px auto 40px;
+    padding:40px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-top:2px solid rgba(255,255,255,.2);
+}
+
+
+.footer-logo{
+    font-size:2rem;
+    font-weight:bold;
+    text-shadow:0 0 10px var(--pink);
+}
+
+
+.footer-links{
+    display:flex;
+    gap:20px;
+}
+
+
+.footer-links a{
+    color:var(--cyan);
+}
+
+
+.footer-links a:hover{
+    color:var(--pink);
+}
+
+
+.footer-copy{
+    text-align:right;
+    opacity:.7;
+    font-size:.85rem;
+}
+
+
+
+/* =========================================
+   Y2K FLOATING DECORATIONS
+========================================= */
+
+.floating-star,
+.floating-heart,
+.floating-diamond{
+    position:fixed;
+    pointer-events:none;
+    z-index:-1;
+    animation:floatDecor 6s infinite ease-in-out;
+}
+
+
+.star-one{
+    top:20%;
+    left:10%;
+    color:white;
+    font-size:3rem;
+}
+
+
+.star-two{
+    right:15%;
+    top:70%;
+    color:var(--lime);
+    font-size:2rem;
+    animation-delay:2s;
+}
+
+
+.star-three{
+    right:8%;
+    top:35%;
+    color:var(--cyan);
+    font-size:2.5rem;
+    animation-delay:1s;
+}
+
+
+.floating-heart{
+    bottom:15%;
+    left:8%;
+    color:var(--pink);
+    font-size:3rem;
+}
+
+
+.floating-diamond{
+    left:4%;
+    top:50%;
+    color:white;
+    font-size:2rem;
+}
+
+
+@keyframes floatDecor{
+    50%{
+        transform:
+        translateY(-25px)
+        rotate(20deg);
+    }
+}
+
+
+
+
+/* =========================================
+   BOOT SCREEN
+========================================= */
 
 .boot-screen{
     position:fixed;
     inset:0;
-    background:#020806;
     display:flex;
     justify-content:center;
     align-items:center;
+    background:#020604;
     z-index:999;
-    transition:opacity .8s;
+    transition:.8s;
 }
 
 
@@ -1472,15 +1035,14 @@ footer{
 }
 
 
-
 .boot-box{
     width:350px;
-    background:#061b14;
-    border:4px solid var(--lime);
     padding:30px;
     text-align:center;
+    border:4px solid var(--lime);
     border-radius:20px;
-    box-shadow:var(--glow);
+    background:var(--forest-dark);
+    box-shadow:0 0 30px var(--lime);
 }
 
 
@@ -1490,31 +1052,24 @@ footer{
 }
 
 
-.boot-box p{
-    margin:20px 0;
-}
-
-
-
 .loading-bar{
-    width:100%;
     height:20px;
-    background:#111;
-    border:2px solid white;
     overflow:hidden;
+    margin-top:20px;
+    border:2px solid white;
     border-radius:20px;
 }
 
 
 .loading-progress{
-    height:100%;
     width:0%;
+    height:100%;
     background:var(--lime);
-    animation:load 2s forwards;
+    animation:loading 2s forwards;
 }
 
 
-@keyframes load{
+@keyframes loading{
     to{
         width:100%;
     }
@@ -1522,22 +1077,21 @@ footer{
 
 
 
-/* ==================================================
-   21. ROBOT MESSAGE
-================================================== */
 
+/* =========================================
+   ROBOT MESSAGE
+========================================= */
 
 .robot-message{
     position:fixed;
     bottom:40px;
     left:50%;
     transform:translateX(-50%);
-    background:#061b14;
-    border:3px solid var(--lime);
     padding:15px 30px;
     border-radius:30px;
+    border:3px solid var(--lime);
+    background:var(--forest-dark);
     opacity:0;
-    pointer-events:none;
     transition:.4s;
 }
 
@@ -1548,171 +1102,70 @@ footer{
 
 
 
-
-
-/* ==================================================
-   22. CONTACT ANIMATION
-================================================== */
-
-
-.contact-system.active .mechanical-arm{
-    animation:
-    armExtend .8s ease forwards;
-}
-
-
-@keyframes armExtend{
-    from{
-        transform:translateY(-80px);
-    }
-
-    to{
-        transform:translateY(0);
-    }
-}
-
-
-
-
-/* ==================================================
-   23. SCREEN ANIMATION
-================================================== */
-
-
-.screen:hover{
-    box-shadow:
-    0 0 30px rgba(201,255,99,.7);
-}
-
-
-.screen:active{
-    transform:scale(.97);
-}
-
-
-
-
-/* ==================================================
-   24. ROBOT MOVEMENT
-================================================== */
-
-
-.robot:hover .pupil{
-    transform:translateX(8px);
-}
-
-
-
-.robot-led{
-    animation:
-    ledPulse 2s infinite;
-}
-
-
-
-@keyframes ledPulse{
-
-    50%{
-        opacity:.4;
-        box-shadow:0 0 5px #6dff75;
-    }
-
-}
-
-
-
-
-/* ==================================================
-   25. MOBILE DESIGN
-================================================== */
-
+/* =========================================
+   MOBILE
+========================================= */
 
 @media(max-width:1000px){
 
-
-.intro-text{
-    position:relative;
-    top:auto;
-    left:auto;
-    width:90%;
-    text-align:center;
-    margin-bottom:40px;
-}
-
-
-.robot-page{
-    flex-direction:column;
-}
+    .intro-text{
+        position:relative;
+        top:auto;
+        left:auto;
+        width:90%;
+        text-align:center;
+        margin-bottom:30px;
+    }
 
 
-.robot-container{
-    transform:scale(.75);
-}
+    .robot-page{
+        flex-direction:column;
+    }
 
 
-.project-grid{
-    grid-template-columns:1fr;
-}
+    .robot-container{
+        transform:scale(.75);
+    }
 
 
-.skill-grid{
-    grid-template-columns:repeat(2,1fr);
-}
+    .skill-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
 
-footer{
-    flex-direction:column;
-    text-align:center;
-}
+    footer{
+        flex-direction:column;
+        text-align:center;
+    }
 
 
-.footer-copy{
-    text-align:center;
-}
-
+    .footer-copy{
+        text-align:center;
+    }
 
 }
-
 
 
 
 @media(max-width:600px){
 
-
-header{
-    padding:20px;
-}
-
-
-.logo{
-    font-size:1rem;
-}
+    header{
+        padding:20px;
+    }
 
 
-.robot-container{
-    transform:scale(.55);
-    width:650px;
-}
+    .robot-container{
+        transform:scale(.55);
+    }
 
 
-.main-screen{
-    width:380px;
-}
+    .window-content{
+        flex-direction:column;
+    }
 
 
-.window-content{
-    flex-direction:column;
-}
-
-
-.profile-avatar{
-    margin:auto;
-}
-
-
-.skill-grid{
-    grid-template-columns:1fr;
-}
-
+    .skill-grid{
+        grid-template-columns:1fr;
+    }
 
 }
