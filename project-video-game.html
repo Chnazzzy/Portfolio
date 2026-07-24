@@ -22,6 +22,19 @@
     once it's ready.
   </p>
 </section>
-
+<script>
+  const starsHost = document.getElementById('stars');
+  const glyphs = ['\u2726','\u2727','\u2605','\u2739'];
+  for (let i = 0; i < 26; i++){
+    const s = document.createElement('span');
+    s.className = 'star';
+    s.textContent = glyphs[i % glyphs.length];
+    s.style.left = Math.random() * 100 + 'vw';
+    s.style.top = Math.random() * 100 + 'vh';
+    s.style.fontSize = (8 + Math.random() * 16) + 'px';
+    s.style.animationDelay = (Math.random() * 3.4) + 's';
+    starsHost.appendChild(s);
+  }
+</script>
 </body>
 </html>
