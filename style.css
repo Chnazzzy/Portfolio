@@ -703,8 +703,8 @@ header {
 ================================================== */
 
 .main-screen{
-    width:430px;
-    height:330px;
+    width:380px;
+    height:300px;
     background:linear-gradient(#7daed1,#416987);
     border:8px solid var(--outline);
     border-radius:35px;
@@ -720,9 +720,10 @@ header {
     background:
     linear-gradient(135deg,#d7fff0,#74d8b2);
     cursor:pointer;
-    position:relative;
-    overflow:hidden;
+    padding:0;
+    font-family:inherit;
 }
+
 
 .screen-glare{
     position:absolute;
@@ -771,8 +772,8 @@ header {
 }
 
 .project-buttons a{
-    width:100px;
-    height:100px;
+    width:75px;
+    height:75px;
     background:var(--lime);
     color:#102000;
     border:5px solid var(--outline);
@@ -783,7 +784,7 @@ header {
     align-items:center;
     text-align:center;
     font-weight:bold;
-    font-size:.8rem;
+    font-size:.75rem;
     transition:.3s;
 }
 

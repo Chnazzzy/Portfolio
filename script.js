@@ -18,3 +18,16 @@ window.addEventListener("load", () => {
     }
 
 });
+const contactBtn = document.getElementById("contactBtn");
+const contactSystem = document.getElementById("contactSystem");
+
+
+if(contactBtn && contactSystem){
+
+    contactBtn.addEventListener("click",()=>{
+
+        contactSystem.classList.add("active");
+
+    });
+
+}
