@@ -1,40 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Video Game — lale.uk</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
+
 <header>
-  <a class="wordmark" href="index.html">lale.uk</a>
-  <a class="back-link" href="index.html">&larr; Back</a>
+
+<a class="wordmark" href="index.html">
+lale.uk
+</a>
+
+
+<a class="back-link" href="index.html">
+← Back
+</a>
+
 </header>
 
-<section class="project-hero">
-  <span class="project-badge">Project 02</span>
-  <h1>Video Game</h1>
-  <p>
-    A 2D fantasy game with quests to complete, built from scratch and published
-    for anyone to play. Details, screenshots, and a link to play it will land here
-    once it's ready.
-  </p>
+
+
+<div class="stars" id="stars"></div>
+
+<div class="leopard-bg"></div>
+
+
+
+
+
+<section class="project-page">
+
+
+
+<div class="project-window">
+
+
+
+<div class="project-header">
+
+<span>
+
+LALE.DATABASE
+
+</span>
+
+
+<p>
+
+PROJECT_002
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="project-content">
+
+
+
+<span class="project-badge">
+
+GAME DEVELOPMENT
+
+</span>
+
+
+
+<h1>
+
+Video Game
+
+</h1>
+
+
+
+
+<p class="project-intro">
+
+A personal game development project exploring
+programming, design and interactive experiences.
+
+Currently under development.
+
+</p>
+
+
+
+
+<div class="project-status">
+
+STATUS:
+
+<span>
+
+PLANNING...
+
+</span>
+
+</div>
+<section class="info-box">
+<h2>
+Overview
+</h2>
+<p>
+This project focuses on creating an interactive
+game experience while exploring programming,
+game mechanics and user interaction.
+
+More details will be added during development.
+</p>
 </section>
-<script>
-  const starsHost = document.getElementById('stars');
-  const glyphs = ['\u2726','\u2727','\u2605','\u2739'];
-  for (let i = 0; i < 26; i++){
-    const s = document.createElement('span');
-    s.className = 'star';
-    s.textContent = glyphs[i % glyphs.length];
-    s.style.left = Math.random() * 100 + 'vw';
-    s.style.top = Math.random() * 100 + 'vh';
-    s.style.fontSize = (8 + Math.random() * 16) + 'px';
-    s.style.animationDelay = (Math.random() * 3.4) + 's';
-    starsHost.appendChild(s);
-  }
-</script>
+<section class="info-box">
+<h2>
+Development
+</h2>
+<ul>
+<li>
+Game concept and planning
+</li>
+<li>
+Programming systems
+</li>
+<li>
+User interface design
+</li>
+<li>
+Testing and improvements
+</li>
+</ul>
+</section>
+<section class="info-box empty">
+<h2>
+Screenshots
+</h2>
+<p>
+Images and gameplay footage coming soon.
+</p>
+</section>
+<section class="info-box empty">
+<h2>
+Technical Details
+</h2>
+<p>
+Engine, programming languages and development
+notes will be added once the project begins.
+</p>
+</section>
+</div>
+</div>
+</section>
+<script src="script.js"></script>
 </body>
 </html>

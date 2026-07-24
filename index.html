@@ -1,130 +1,1262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>lale.uk</title>
+
+<title>Lale.uk | Robotics Portfolio</title>
+
+<meta name="description"
+content="Lale Muhamad - Robotics Engineering portfolio featuring robotics, programming and engineering projects.">
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
+
+<!-- =========================
+     BACKGROUND EFFECTS
+========================= -->
+
+<div id="stars"></div>
+
+<div id="sparkles"></div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-  <a class="wordmark" href="index.html">lale.uk</a>
-  <button id="contactBtn">Contact</button>
-</header>
 
-<div class="stars" id="stars" aria-hidden="true"></div>
+<a class="logo" href="index.html">
+    lale.uk
+</a>
 
-<div class="turn-section" id="turnSection">
-  <div class="stage-sticky">
 
-    <div class="leopard-bg" aria-hidden="true"></div>
+<div class="header-buttons">
 
-    <div class="stage">
-      <div class="robot" id="robot">
+<button id="contactButton">
+    Contact
+</button>
 
-        <div class="face front">
-          <div class="top-screen">
-            <div class="eye"></div>
-            <div class="eye"></div>
-          </div>
-          <div class="body-wrap">
-            <div class="side-arm"></div>
-            <div class="body-screen">
-              <div class="name-plate">Lale <span class="heart">&hearts;</span></div>
-              <div class="proj-row">
-                <a class="proj-btn" href="project-robotic-hand.html">Robotic<br>Hand</a>
-                <a class="proj-btn" href="project-video-game.html">Video<br>Game</a>
-              </div>
-            </div>
-            <div class="side-arm"></div>
-          </div>
-          <div class="tracks"><div></div><div></div><div></div><div></div></div>
-        </div>
-
-        <div class="face back">
-          <div class="top-screen"></div>
-          <div class="body-wrap">
-            <div class="side-arm"></div>
-            <div class="copyright-screen">
-              <span class="name">&copy; 2026</span>
-              <span class="c">Lale Muhamad</span>
-            </div>
-            <div class="side-arm"></div>
-          </div>
-          <div class="tracks"><div></div><div></div><div></div><div></div></div>
-
-          <div class="card-arm" id="cardArm">
-            <div class="arm-pole"></div>
-            <div class="contact-card">
-              <h3>Get in touch</h3>
-              <a href="mailto:lale.muhamad@outlook.com">lale.muhamad@outlook.com</a>
-              <a href="https://github.com/Chnazzzy" target="_blank" rel="noopener">github.com/Chnazzzy</a>
-              <span>Birmingham, UK</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
 </div>
 
-<script>
-  // scatter stars across the page
-  const starsHost = document.getElementById('stars');
-  const glyphs = ['\u2726','\u2727','\u2605','\u2739'];
-  for (let i = 0; i < 36; i++){
-    const s = document.createElement('span');
-    s.className = 'star';
-    s.textContent = glyphs[i % glyphs.length];
-    s.style.left = Math.random() * 100 + 'vw';
-    s.style.top = Math.random() * 100 + 'vh';
-    s.style.fontSize = (8 + Math.random() * 16) + 'px';
-    s.style.animationDelay = (Math.random() * 3.4) + 's';
-    starsHost.appendChild(s);
-  }
 
-  const turnSection = document.getElementById('turnSection');
-  const robot = document.getElementById('robot');
-  const cardArm = document.getElementById('cardArm');
-  const contactBtn = document.getElementById('contactBtn');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+</header>
 
-  function clamp(v,min,max){ return Math.max(min, Math.min(max, v)); }
 
-  let lastProgress = 0;
 
-  function updateTurn(){
-    robot.classList.remove('forced-turn');
-    const rect = turnSection.getBoundingClientRect();
-    const scrollable = turnSection.offsetHeight - window.innerHeight;
-    const progress = clamp(-rect.top / scrollable, 0, 1);
-    lastProgress = progress;
+<!-- =========================
+     MAIN ROBOT EXPERIENCE
+========================= -->
 
-    robot.style.transform = reduceMotion
-      ? `rotateY(${progress > 0.5 ? 180 : 0}deg)`
-      : `rotateY(${progress * 180}deg)`;
 
-    if (progress < 0.45) cardArm.classList.remove('visible');
-  }
+<main>
 
-  window.addEventListener('scroll', updateTurn, { passive: true });
-  window.addEventListener('resize', updateTurn);
-  updateTurn();
 
-  // Contact: force the robot to face-back immediately (so it always
-  // works, regardless of scroll math/timing) and lift the card,
-  // then ease the page toward the back position too.
-  contactBtn.addEventListener('click', () => {
-    robot.classList.add('forced-turn');
-    cardArm.classList.add('visible');
+<section class="robot-page">
 
-    const target = turnSection.offsetTop + turnSection.offsetHeight - window.innerHeight;
-    window.scrollTo({ top: target, behavior: reduceMotion ? 'auto' : 'smooth' });
-  });
-</script>
 
+
+<div class="intro-text">
+
+<p class="status">
+
+● ROBOT ONLINE
+
+</p>
+
+
+<h1>
+
+LALE.OS
+
+</h1>
+
+
+<p>
+
+Welcome to my personal robotics portfolio.
+
+Explore my projects,
+engineering journey
+and experiments.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<!-- =========================
+     ROBOT
+========================= -->
+
+
+<div class="robot-container">
+
+
+<div class="robot" id="robot">
+
+
+
+<!-- =========================
+     FRONT FACE
+========================= -->
+
+
+<div class="robot-side front">
+
+
+
+<!-- HEAD -->
+
+<div class="robot-head">
+
+
+<div class="bolt bolt-left"></div>
+
+<div class="bolt bolt-right"></div>
+
+
+
+<div class="eyes">
+
+
+<div class="eye">
+
+<div class="pupil"></div>
+
+</div>
+
+
+
+<div class="eye">
+
+<div class="pupil"></div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- BODY -->
+
+
+<div class="robot-body">
+
+
+
+<div class="robot-arm left">
+
+
+<div class="joint"></div>
+
+
+</div>
+
+
+
+
+
+<div class="main-screen">
+
+
+
+<button 
+class="screen"
+id="mainScreen">
+
+
+<div class="screen-glare"></div>
+
+
+
+<div class="screen-content">
+
+
+<p class="boot">
+
+LALE.OS
+
+</p>
+
+
+
+<h2>
+
+Lale ♥
+
+</h2>
+
+
+
+<p class="click-text">
+
+CLICK TO OPEN
+
+</p>
+
+
+</div>
+
+
+
+</button>
+
+
+
+
+
+
+<div class="project-buttons">
+
+
+
+<a href="project-robotic-hand.html">
+
+<span>
+
+01
+
+</span>
+
+Robotic
+Hand
+
+</a>
+
+
+
+
+
+<a href="project-video-game.html">
+
+<span>
+
+02
+
+</span>
+
+Video
+Game
+
+</a>
+
+
+
+</div>
+
+
+
+<div class="robot-speaker"></div>
+
+
+<div class="robot-led"></div>
+
+
+
+</div>
+
+
+
+
+
+<div class="robot-arm right">
+
+
+<div class="joint"></div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<!-- TRACKS -->
+
+
+<div class="robot-tracks">
+
+
+<div></div>
+
+<div></div>
+
+<div></div>
+
+<div></div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<!-- =========================
+     BACK FACE
+========================= -->
+
+
+<div class="robot-side back">
+
+
+
+<div class="robot-head back-head">
+
+
+<div class="bolt bolt-left"></div>
+
+<div class="bolt bolt-right"></div>
+
+
+</div>
+
+
+
+
+<div class="robot-body">
+
+
+<div class="robot-arm">
+
+</div>
+
+
+
+<div class="back-screen">
+
+
+<h2>
+
+© 2026
+
+</h2>
+
+
+<p>
+
+Lale Muhamad
+
+</p>
+
+
+<span>
+
+LM-RBT-001
+
+</span>
+
+
+</div>
+
+
+
+
+<div class="robot-arm">
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="robot-tracks">
+
+
+<div></div>
+
+<div></div>
+
+<div></div>
+
+<div></div>
+
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================
+     CONTACT ARM
+========================= -->
+
+
+<div class="contact-system" id="contactSystem">
+
+
+<div class="robot-contact-arm">
+
+
+<div class="mechanical-arm">
+
+
+<div class="arm-piece"></div>
+
+<div class="arm-joint"></div>
+
+<div class="arm-piece"></div>
+
+
+</div>
+
+
+
+<div class="glitter-holder">
+
+✦ ✧ ✦ ✨ ✧ ✦
+
+</div>
+
+
+
+
+
+<div class="contact-card">
+
+
+<div class="card-top">
+
+LALE.ID
+
+</div>
+
+
+
+<h3>
+
+CONTACT
+
+</h3>
+
+
+
+<div class="card-line">
+
+Lale Muhamad
+
+</div>
+
+
+<a href="mailto:lale.muhamad@outlook.com">
+
+lale.muhamad@outlook.com
+
+</a>
+
+
+
+<a href="https://github.com/Chnazzzy"
+target="_blank">
+
+github.com/Chnazzzy
+
+</a>
+
+
+
+<div class="card-line">
+
+Birmingham, UK
+
+</div>
+
+
+
+
+<div class="online-status">
+
+● AVAILABLE
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- =========================
+     ABOUT SCREEN
+========================= -->
+
+
+<section class="about-system" id="aboutSystem">
+
+
+<div class="xp-window">
+
+
+<div class="window-header">
+
+
+<span>
+
+LALE_PROFILE.EXE
+
+</span>
+
+
+
+<button id="closeAbout">
+
+×
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="window-content">
+
+
+
+<div class="profile-avatar">
+
+
+<div class="mini-robot">
+
+🤖
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="profile-text">
+
+
+<h2>
+
+Hello!
+
+</h2>
+
+
+
+<p>
+
+I'm Lale, an aspiring Robotics Engineer
+interested in robotics, electronics,
+software and creative engineering.
+
+</p>
+
+
+
+<p>
+
+I enjoy designing things that combine
+hardware and programming together,
+from robotic systems to interactive
+software projects.
+
+</p>
+
+
+
+<p>
+
+This portfolio combines my love for
+engineering with my favourite era of
+internet design:
+the early 2000s.
+
+</p>
+
+
+
+
+
+<div class="profile-info">
+
+
+
+<div>
+
+<strong>
+
+CURRENTLY
+
+</strong>
+
+
+<span>
+
+Electrical & Electronic Engineering
+
+</span>
+
+
+</div>
+
+
+
+
+
+<div>
+
+<strong>
+
+INTERESTS
+
+</strong>
+
+
+<span>
+
+Robotics · AI · Electronics · Programming
+
+</span>
+
+
+</div>
+
+
+
+
+
+<div>
+
+<strong>
+
+TOOLS
+
+</strong>
+
+
+<span>
+
+Python · C++ · Arduino · CAD · Web
+
+</span>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- =========================
+     PROJECT AREA
+========================= -->
+
+
+<section class="projects" id="projects">
+
+
+<div class="section-title">
+
+
+<span>
+
+PROJECT DATABASE
+
+</span>
+
+
+<h2>
+
+My Projects
+
+</h2>
+
+
+</div>
+
+
+
+
+<div class="project-grid">
+
+
+
+
+
+<article class="project-card">
+
+
+
+<div class="project-number">
+
+001
+
+</div>
+
+
+
+
+<h3>
+
+Robotic Hand
+
+</h3>
+
+
+
+<p>
+
+A robotic hand project exploring
+servo motors, electronics,
+mechanical design and programming.
+
+</p>
+
+
+
+<div class="project-tags">
+
+
+<span>
+
+Arduino
+
+</span>
+
+
+<span>
+
+CAD
+
+</span>
+
+
+<span>
+
+Robotics
+
+</span>
+
+
+</div>
+
+
+
+
+<a href="project-robotic-hand.html">
+
+ACCESS FILE →
+
+</a>
+
+
+
+</article>
+
+
+
+
+
+
+<article class="project-card">
+
+
+
+<div class="project-number">
+
+002
+
+</div>
+
+
+
+<h3>
+
+Tempo Takedown
+
+</h3>
+
+
+
+<p>
+
+A rhythm based game developed
+using programming concepts,
+user interaction and game logic.
+
+</p>
+
+
+
+
+<div class="project-tags">
+
+
+<span>
+
+Python
+
+</span>
+
+
+<span>
+
+Game Dev
+
+</span>
+
+
+<span>
+Algorithms
+</span>
+</div>
+<a href="project-video-game.html">
+ACCESS FILE →
+</a>
+</article>
+<article class="project-card future">
+<div class="project-number">
+003
+</div>
+<h3>
+Future Projects
+</h3>
+<p>
+More engineering experiments,
+robotics builds and university
+projects will appear here.
+</p>
+<div class="locked">
+LOCKED
+</div>
+</article>
+</div>
+</section>
+<!-- =========================
+     ENGINEERING JOURNEY
+========================= -->
+
+
+<section class="journey" id="journey">
+
+
+<div class="section-title">
+
+
+<span>
+
+DEVELOPMENT LOG
+
+</span>
+
+
+<h2>
+
+My Journey
+
+</h2>
+
+
+</div>
+
+
+
+
+
+<div class="timeline">
+
+
+
+
+
+<div class="timeline-item">
+
+
+<div class="timeline-icon">
+
+01
+
+</div>
+
+
+
+<div class="timeline-content">
+
+
+<h3>
+
+Programming
+
+</h3>
+
+
+<p>
+
+Started developing software projects,
+learning programming concepts and
+building interactive applications.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="timeline-item">
+
+
+<div class="timeline-icon">
+
+02
+
+</div>
+
+
+
+<div class="timeline-content">
+
+
+<h3>
+
+Robotics
+
+</h3>
+
+
+<p>
+
+Began experimenting with electronics,
+microcontrollers, motors and mechanical
+systems.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="timeline-item">
+
+
+<div class="timeline-icon">
+
+03
+
+</div>
+
+
+
+<div class="timeline-content">
+
+
+<h3>
+
+Engineering
+
+</h3>
+
+
+<p>
+
+Continuing my journey into Electrical
+and Electronic Engineering, focusing on
+creating intelligent machines.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- =========================
+     SKILLS DATABASE
+========================= -->
+
+
+<section class="skills" id="skills">
+
+
+<div class="section-title">
+
+
+<span>
+
+SYSTEM ABILITIES
+
+</span>
+
+
+<h2>
+
+Skills
+
+</h2>
+
+
+</div>
+
+
+
+
+
+<div class="skill-grid">
+
+
+
+<div class="skill-card">
+
+HTML
+
+</div>
+
+
+
+<div class="skill-card">
+
+CSS
+
+</div>
+
+
+
+<div class="skill-card">
+
+JavaScript
+
+</div>
+
+
+
+<div class="skill-card">
+
+Python
+
+</div>
+
+
+
+<div class="skill-card">
+
+C++
+
+</div>
+
+
+
+<div class="skill-card">
+
+Arduino
+
+</div>
+
+
+
+<div class="skill-card">
+
+Electronics
+
+</div>
+
+
+
+<div class="skill-card">
+
+CAD
+
+</div>
+
+
+
+<div class="skill-card">
+
+Robotics
+
+</div>
+
+
+
+<div class="skill-card">
+
+Git
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+
+<footer>
+
+
+<div class="footer-logo">
+
+lale.uk
+
+</div>
+
+
+
+
+<div class="footer-links">
+
+
+<a href="#aboutSystem">
+
+About
+
+</a>
+<a href="#projects">
+Projects
+</a>
+<a href="mailto:lale.muhamad@outlook.com">
+Email
+</a>
+<a href="https://github.com/Chnazzzy"
+target="_blank">
+GitHub
+</a>
+</div>
+<div class="footer-copy">
+© 2026 Lale Muhamad
+<br>
+Built with HTML,
+CSS & JavaScript
+</div>
+</footer>
+<div class="floating-star star-one">
+✦
+</div>
+<div class="floating-star star-two">
+✧
+</div>
+<div class="floating-star star-three">
+★
+</div>
+<div class="floating-heart">
+♥
+</div>
+<div class="floating-diamond">
+◇
+</div>
+<div class="boot-screen" id="bootScreen">
+<div class="boot-box">
+<h2>
+LALE.OS
+</h2>
+<p>
+Starting robot system...
+</p>
+<div class="loading-bar">
+<div class="loading-progress">
+</div>
+</div>
+<p class="boot-percent">
+LOADING 100%
+</p>
+</div>
+</div>
+<div class="robot-message" id="robotMessage">
+SYSTEM READY
+</div>
+<script src="script.js"></script>
 </body>
 </html>
