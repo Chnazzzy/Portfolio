@@ -31,7 +31,17 @@
           <div class="body-wrap">
             <div class="side-arm"></div>
             <div class="body-screen">
-              <div class="name-plate">Lale <span class="heart">&hearts;</span></div>
+              <div class="name-plate-wrap" id="namePlateWrap" role="button" tabindex="0" aria-label="Flip to read about me">
+                <div class="name-plate-inner" id="namePlateInner">
+                  <div class="name-plate-face name-plate-front">
+                    <span class="name-text">Lale <span class="heart">&hearts;</span></span>
+                    <span class="click-hint">click me</span>
+                  </div>
+                  <div class="name-plate-face name-plate-back">
+                    <p class="about-text">A-level student &mdash; Maths, Physics &amp; Computer Science. Building robots and games on the way to an engineering degree.</p>
+                  </div>
+                </div>
+              </div>
               <div class="proj-row">
                 <a class="proj-btn" href="project-robotic-hand.html">Robotic<br>Hand</a>
                 <a class="proj-btn" href="project-video-game.html">Video<br>Game</a>
@@ -85,6 +95,17 @@
     s.style.animationDelay = (Math.random() * 3.4) + 's';
     starsHost.appendChild(s);
   }
+
+  const namePlateWrap = document.getElementById('namePlateWrap');
+  const namePlateInner = document.getElementById('namePlateInner');
+  function toggleNamePlate(e){
+    e.stopPropagation();
+    namePlateInner.classList.toggle('flipped');
+  }
+  namePlateWrap.addEventListener('click', toggleNamePlate);
+  namePlateWrap.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggleNamePlate(e); }
+  });
 
   const turnSection = document.getElementById('turnSection');
   const robot = document.getElementById('robot');
