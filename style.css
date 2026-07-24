@@ -788,7 +788,9 @@ header{
     font-size:35px;
     color:#ff6fae;
 }
-
+.professional-joke{
+    background:red;
+}
 .journey{
     position:relative;
 }
