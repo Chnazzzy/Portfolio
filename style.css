@@ -768,22 +768,25 @@ header{
     margin:120px auto;
 }
 
-.professional-joke{
-    position:absolute;
-    left:-170px;
-    top:120px;
-    color:white;
-    font-family:Tahoma, sans-serif;
-    font-size:.9rem;
-    font-style:italic;
-    transform:rotate(-8deg);
+.journey{
+    position:relative;
 }
 
-.professional-joke .arrow{
+.professional-joke{
+    position:absolute;
+    left:20px;
+    top:80px;
+    color:white;
+    font-family:Tahoma, Arial, sans-serif;
+    font-size:14px;
+    transform:rotate(-8deg);
+    z-index:10;
+}
+
+.professional-joke span{
     display:block;
-    font-size:2rem;
-    color:var(--pink);
-    margin-bottom:5px;
+    font-size:35px;
+    color:#ff6fae;
 }
 
 .journey{
