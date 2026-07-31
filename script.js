@@ -26,10 +26,14 @@ window.addEventListener("load", () => {
 // CONTACT CARD
 const contactButton = document.getElementById("contactButton");
 const contactSystem = document.getElementById("contactSystem");
+const rightArm = document.querySelector(".robot-side.front .robot-arm.right");
 
 if (contactButton && contactSystem) {
     contactButton.addEventListener("click", () => {
-        contactSystem.classList.toggle("active");
+        const isOpen = contactSystem.classList.toggle("active");
+        if (rightArm) {
+            rightArm.classList.toggle("raised", isOpen);
+        }
     });
 }
 
@@ -50,11 +54,3 @@ if (closeAbout && aboutSystem) {
         aboutSystem.classList.remove("active");
     });
 }
-const contactButton = document.getElementById('contactButton');
-const contactSystem = document.getElementById('contactSystem');
-const rightArm = document.querySelector('.robot-side.front .robot-arm.right');
-
-contactButton.addEventListener('click', () => {
-  const isOpen = contactSystem.classList.toggle('active');
-  rightArm.classList.toggle('raised', isOpen);
-});
