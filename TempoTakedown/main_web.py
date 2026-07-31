@@ -162,11 +162,14 @@ def draw_text_box(text, font, color, rect):
 # LOGIN / SIGNUP
 def login_screen():
     global current_user
-    username = password = ""
+
+    username = ""
+    password = ""
     active = "user"
     error = ""
+    running = True
 
-    while True:
+    while running:
         draw_center("LOGIN / SIGN UP", BIG_FONT, WHITE, 120)
         draw_center(f"Username: {username}", FONT, ORANGE if active=="user" else WHITE, 220)
         draw_center(f"Password: {'*'*len(password)}", FONT, ORANGE if active=="pass" else WHITE, 260)
