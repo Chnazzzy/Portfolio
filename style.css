@@ -1186,3 +1186,30 @@ footer{
     }
 
 }
+.robot-arm.right{
+    transition: transform .6s cubic-bezier(.2,1.4,.4,1);
+    transform-origin: top center;
+}
+
+.robot-arm.right.raised{
+    transform: rotate(-40deg) translateX(15px);
+}
+.logo{
+    background: linear-gradient(180deg, #fff 0%, var(--chrome) 50%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.skill-card, #contactButton{
+    position: relative;
+    overflow: hidden;
+}
+.skill-card::after, #contactButton::after{
+    content:"";
+    position:absolute;
+    top:-50%; left:-20%;
+    width:60%; height:200%;
+    background: rgba(255,255,255,.25);
+    transform: rotate(25deg);
+    pointer-events:none;
+}

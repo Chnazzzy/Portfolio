@@ -50,3 +50,11 @@ if (closeAbout && aboutSystem) {
         aboutSystem.classList.remove("active");
     });
 }
+const contactButton = document.getElementById('contactButton');
+const contactSystem = document.getElementById('contactSystem');
+const rightArm = document.querySelector('.robot-side.front .robot-arm.right');
+
+contactButton.addEventListener('click', () => {
+  const isOpen = contactSystem.classList.toggle('active');
+  rightArm.classList.toggle('raised', isOpen);
+});
