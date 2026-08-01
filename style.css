@@ -13,7 +13,7 @@
     --silver:#d9e8ee;
     --chrome:#718b9b;
     --screen:#caffdf;
-    --ink:#052b20;
+    --ink:#5ec6cd;
     --outline:#010201;
     --white:#f5fff8;
     --shadow:0 25px 60px rgba(0,0,0,.65);
@@ -35,7 +35,7 @@ body{
     font-family:Tahoma,Verdana,Arial,sans-serif;
     color:white;
     background:
-    radial-gradient(circle at top,#1b6143,transparent 40%),
+    radial-gradient(circle at top,#8bd2c7,transparent 40%),
     linear-gradient(180deg,var(--forest),var(--forest-dark));
 }
 
