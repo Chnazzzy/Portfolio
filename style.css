@@ -1304,3 +1304,100 @@ footer{
 .timeline p {
     margin: 12px 0;
 }
+/* 
+   PROJECT PAGE
+ */
+
+.project-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:140px 20px 80px;
+}
+
+.project-window{
+    width:min(900px,95%);
+    height:fit-content;
+    overflow:hidden;
+    background:linear-gradient(#dcecff,#8fb9d8);
+    border:6px solid var(--outline);
+    border-radius:25px;
+    box-shadow:var(--shadow);
+}
+
+.project-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 25px;
+    color:white;
+    font-weight:bold;
+    letter-spacing:2px;
+    font-size:.85rem;
+    background:linear-gradient(#6bb4ff,#24588a);
+}
+
+.project-content{
+    padding:40px;
+    color:var(--ink);
+}
+
+.project-badge{
+    display:inline-block;
+    padding:6px 16px;
+    margin-bottom:15px;
+    font-size:.7rem;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:#052b20;
+    background:var(--lime);
+    border:3px solid var(--outline);
+    border-radius:20px;
+}
+
+.project-content h1{
+    font-size:3rem;
+    line-height:1.1;
+    margin-bottom:20px;
+    color:var(--green);
+}
+
+.project-intro{
+    max-width:650px;
+    line-height:1.6;
+    margin-bottom:20px;
+    opacity:.9;
+}
+
+.project-status{
+    font-weight:bold;
+    letter-spacing:2px;
+    margin-bottom:10px;
+    font-size:.85rem;
+}
+
+.project-status span{
+    color:#15933c;
+}
+
+.wordmark{
+    font-size:1.4rem;
+    font-weight:900;
+    letter-spacing:2px;
+    color:white;
+}
+
+.back-link{
+    padding:8px 20px;
+    border:2px solid var(--lime);
+    border-radius:20px;
+    color:white;
+    font-size:.8rem;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back-link:hover{
+    background:var(--lime);
+    color:black;
+}
