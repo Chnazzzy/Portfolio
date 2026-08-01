@@ -54,3 +54,20 @@ if (closeAbout && aboutSystem) {
         aboutSystem.classList.remove("active");
     });
 }
+const bubbles = 12;
+
+for(let i=0;i<bubbles;i++){
+    const bubble=document.createElement("div");
+    bubble.className="bubble";
+
+    bubble.style.left=Math.random()*100+"%";
+    bubble.style.top=Math.random()*100+"%";
+
+    const size=Math.random()*80+40;
+    bubble.style.width=size+"px";
+    bubble.style.height=size+"px";
+
+    bubble.style.animationDelay=Math.random()*8+"s";
+
+    document.body.appendChild(bubble);
+}
