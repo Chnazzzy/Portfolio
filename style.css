@@ -526,11 +526,12 @@ header{
 
 .contact-system{
     position:absolute;
-    right:5%;
-    top:50%;
+    left:50%;
+    top:100%;
     opacity:0;
     pointer-events:none;
-    transform:translateY(40px) scale(.8);
+    transform:translate(-50%,10px) scale(.85) rotate(40deg);
+    transform-origin:top center;
     transition:.6s cubic-bezier(.2,1.4,.4,1);
     z-index:20;
 }
@@ -539,7 +540,7 @@ header{
 .contact-system.active{
     opacity:1;
     pointer-events:auto;
-    transform:translateY(0) scale(1);
+    transform:translate(-50%,0) scale(1) rotate(40deg);
 }
 
 
@@ -764,7 +765,7 @@ header{
 .journey,
 .skills{
     width:min(1000px,90%);
-    margin:120px auto;
+    margin:70px auto;
 }
 
 .journey{
@@ -787,15 +788,12 @@ header{
     font-size:35px;
     color:#ff6fae;
 }
-.professional-joke{
-    background:red;
-}
 .journey{
     position:relative;
 }
 .section-title{
     text-align:center;
-    margin-bottom:50px;
+    margin-bottom:35px;
 }
 
 
@@ -838,7 +836,7 @@ header{
 .timeline-item{
     display:flex;
     gap:25px;
-    margin-bottom:45px;
+    margin-bottom:28px;
 }
 
 
@@ -924,8 +922,8 @@ header{
 
 footer{
     width:90%;
-    margin:100px auto 40px;
-    padding:40px 0;
+    margin:60px auto 30px;
+    padding:30px 0;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -1634,11 +1632,6 @@ footer{
     margin:0;
     font-size:.85rem;
     opacity:.75;
-}
-
-.research-note{
-    font-size:.8rem;
-    opacity:.6;
 }
 
 .timeline-report{
