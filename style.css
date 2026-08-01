@@ -1455,3 +1455,218 @@ footer{
     font-size:.8rem;
     opacity:.7;
 }
+.report-page{
+    min-height:100vh;
+    padding:140px 20px 100px;
+}
+
+.report-container{
+    width:min(900px,95%);
+    margin:0 auto;
+}
+
+.report-terminal{
+    overflow:hidden;
+    margin-bottom:40px;
+    background:var(--forest-dark);
+    border:3px solid var(--lime);
+    border-radius:12px;
+    box-shadow:0 0 30px rgba(202,255,99,.15),var(--shadow);
+}
+
+.terminal-bar{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 18px;
+    font-family:"Courier New",monospace;
+    font-size:.7rem;
+    letter-spacing:2px;
+    color:var(--lime);
+    background:linear-gradient(#1b6143,#0d3223);
+    border-bottom:2px solid var(--lime);
+}
+
+.terminal-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+}
+.terminal-dot.red{background:#ff5f56;}
+.terminal-dot.yellow{background:#ffbd2e;}
+.terminal-dot.green{background:#27c93f;}
+
+.terminal-body{
+    padding:40px;
+}
+
+.report-badge{
+    display:inline-block;
+    padding:6px 16px;
+    font-size:.7rem;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:#052b20;
+    background:var(--lime);
+    border:3px solid var(--outline);
+    border-radius:20px;
+}
+
+.report-title{
+    font-size:2.6rem;
+    margin:15px 0;
+    color:white;
+}
+
+.report-abstract{
+    max-width:640px;
+    line-height:1.7;
+    opacity:.85;
+    margin-bottom:20px;
+}
+
+.report-status-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    font-family:"Courier New",monospace;
+    font-size:.75rem;
+    letter-spacing:1px;
+    color:var(--cyan);
+}
+
+.report-section{
+    margin-bottom:55px;
+}
+
+.section-number{
+    display:block;
+    margin-bottom:8px;
+    font-family:"Courier New",monospace;
+    font-size:.8rem;
+    letter-spacing:3px;
+    color:var(--lime);
+}
+
+.report-section h2{
+    margin-bottom:15px;
+    padding-bottom:10px;
+    font-size:1.7rem;
+    color:white;
+    border-bottom:2px solid rgba(255,255,255,.15);
+}
+
+.report-section p{
+    margin-bottom:14px;
+    line-height:1.7;
+    opacity:.9;
+}
+
+.chameleon-quote{
+    padding:16px 20px;
+    margin:20px 0;
+    font-style:italic;
+    line-height:1.6;
+    color:var(--screen);
+    border-left:4px solid var(--lime);
+    border-radius:0 10px 10px 0;
+    background:rgba(255,255,255,.06);
+}
+
+.flow-diagram{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    padding:20px;
+    margin:15px 0;
+    font-family:"Courier New",monospace;
+    font-size:.8rem;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:10px;
+}
+
+.flow-step{
+    padding:8px 14px;
+    border-left:3px solid var(--lime);
+    border-radius:4px;
+    background:rgba(202,255,99,.08);
+}
+
+.flow-step.warn{
+    border-left-color:#ff7a7a;
+    background:rgba(255,122,122,.1);
+}
+
+.flow-step.good{
+    border-left-color:var(--lime);
+    background:rgba(202,255,99,.18);
+}
+
+.flow-arrow{
+    text-align:center;
+    opacity:.5;
+    color:var(--lime);
+}
+
+.spec-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.spec-box{
+    padding:20px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:10px;
+}
+
+.spec-box h3{
+    margin-bottom:8px;
+    font-size:.75rem;
+    letter-spacing:2px;
+    color:var(--lime);
+}
+
+.spec-box p{
+    margin:0;
+    font-size:.85rem;
+    opacity:.75;
+}
+
+.research-note{
+    font-size:.8rem;
+    opacity:.6;
+}
+
+.timeline-report{
+    list-style:none;
+    padding:0;
+    margin-top:15px;
+}
+
+.timeline-report li{
+    position:relative;
+    padding-left:28px;
+    margin-bottom:16px;
+    line-height:1.5;
+}
+
+.timeline-report li::before{
+    content:"▹";
+    position:absolute;
+    left:0;
+    color:var(--lime);
+}
+
+.gallery-placeholder{
+    padding:40px;
+    text-align:center;
+    font-family:"Courier New",monospace;
+    font-size:.85rem;
+    opacity:.6;
+    border:2px dashed rgba(255,255,255,.2);
+    border-radius:12px;
+}
