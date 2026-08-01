@@ -42,32 +42,31 @@ if (contactButton && contactSystem) {
 const aboutScreen = document.getElementById("aboutScreen");
 const aboutSystem = document.getElementById("aboutSystem");
 const closeAbout = document.getElementById("closeAbout");
+const aboutButton = document.getElementById("aboutButton");
 
-if (aboutScreen && aboutSystem) {
-    aboutScreen.addEventListener("click", () => {
-        aboutSystem.classList.add("active");
-    });
+function openAbout(){
+    if(aboutSystem){
+        document.querySelector(".robot-page")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+        setTimeout(()=>{
+            aboutSystem.classList.add("active");
+        },700);
+    }
 }
 
-if (closeAbout && aboutSystem) {
-    closeAbout.addEventListener("click", () => {
+if(aboutScreen){
+    aboutScreen.addEventListener("click", openAbout);
+}
+
+if(aboutButton){
+    aboutButton.addEventListener("click", openAbout);
+}
+
+if(closeAbout && aboutSystem){
+    closeAbout.addEventListener("click",()=>{
         aboutSystem.classList.remove("active");
     });
-}
-const bubbles = 12;
-
-for(let i=0;i<bubbles;i++){
-    const bubble=document.createElement("div");
-    bubble.className="bubble";
-
-    bubble.style.left=Math.random()*100+"%";
-    bubble.style.top=Math.random()*100+"%";
-
-    const size=Math.random()*80+40;
-    bubble.style.width=size+"px";
-    bubble.style.height=size+"px";
-
-    bubble.style.animationDelay=Math.random()*8+"s";
-
-    document.body.appendChild(bubble);
 }

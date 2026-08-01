@@ -247,6 +247,23 @@ header{
 /* 
    ROBOT HEAD
  */
+.robot-head{
+    z-index:5;
+}
+
+.robot-body{
+    position:relative;
+    z-index:3;
+}
+
+.robot-arm{
+    z-index:2;
+}
+
+.robot-tracks{
+    position:relative;
+    z-index:4;
+}
 
 .robot-head{
     width:55%;
@@ -568,13 +585,13 @@ header{
 .contact-system{
     position:absolute;
     left:50%;
-    top:85%;
+    top:72%;
     opacity:0;
     pointer-events:none;
     transform:translate(-50%,10px) scale(.85) rotate(40deg);
     transform-origin:top center;
     transition:.6s cubic-bezier(.2,1.4,.4,1);
-    z-index:20;
+    z-index:15;
 }
 
 
@@ -655,6 +672,7 @@ header{
 
 .contact-card{
     width:270px;
+    transform:translate(25px);
     padding:20px;
     color:#14251d;
     background:white;
@@ -811,6 +829,7 @@ header{
 
 .journey{
     position:relative;
+    z-index:10;
 }
 
 .professional-joke{
@@ -2341,14 +2360,14 @@ pointer-events:none;
     animation-delay:2s;
 }
 .robot-page{
-    min-height:900px;
+    min-height:760px;
     padding-bottom:0;
     overflow:visible;
     z-index:20;
 }
 
 .robot-container{
-    height:560px;
+    height:520px;
 }
 
 .robot-body{
