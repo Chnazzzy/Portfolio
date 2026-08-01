@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chameleon — lale.uk</title>
+<title>Project CHAMELEON — lale.uk</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,240 +20,170 @@
 <div class="report-container">
 
 <div class="report-terminal">
+
 <div class="terminal-bar">
 <span class="terminal-dot red"></span>
 <span class="terminal-dot yellow"></span>
 <span class="terminal-dot green"></span>
-<span>LALE.DATABASE — RESEARCH_001.LOG</span>
+<span>LALE.DATABASE — PROJECT_001.LOG</span>
 </div>
 
 <div class="terminal-body">
-<span class="report-badge">ROBOTICS</span>
+
+<span class="win95-badge">ROBOTICS · RESEARCH · WORK IN PROGRESS</span>
 
 <h1 class="report-title">Project CHAMELEON</h1>
 
 <p class="report-abstract">
-A research investigation into self-reconfigurable robotics and whether
-robots can adapt their own structure instead of being limited to a single
-design.
+A long-term research project into self-reconfigurable modular robotics —
+machines that don't just perform one fixed task, but can physically
+reorganise themselves to solve unknown problems. Very early stages: this
+page is a live notebook, not a finished write-up.
 </p>
 
 <div class="report-status-row">
-<span>STATUS: <strong>RESEARCHING...</strong></span>
+<span>STATUS: <strong>EARLY STAGE</strong></span>
 <span>LOG_ID: 001</span>
 <span>LAST_UPDATE: IN PROGRESS</span>
-<span>FIELD: ROBOTICS / AI</span>
+</div>
+
 </div>
 </div>
+
+<div class="marquee-bar">
+<span>⚡ STATUS: EARLY STAGE ⚡ RESEARCH LOG ACTIVE ⚡ COME BACK LATER FOR UPDATES ⚡ DO NOT UNPLUG ⚡</span>
 </div>
 
 <section class="report-section">
 <span class="section-number">// 01</span>
 <h2>Overview</h2>
-
 <p>
-Most robots today are designed around one specific purpose. A robotic arm
-is built for manufacturing, a rover is built for exploration, and a drone
-is built for flight.
+Most robots are built for one job and fail the moment conditions change
+outside their design. Project CHAMELEON is my attempt to explore the
+opposite idea: could a robot be made of simple modules capable of
+reorganising their own structure to survive and complete unknown tasks in
+changing environments?
 </p>
-
 <p>
-This creates a limitation: when the environment changes, the robot itself
-usually cannot change with it.
-</p>
-
-<p>
-Project CHAMELEON investigates whether a different approach is possible.
-Instead of creating one robot for one task, the idea is to create a system
-made from smaller modules that can reorganise themselves into different
-structures depending on the situation.
+This is a genuine work in progress — right now that means research,
+planning, and a first physical prototype: a robotic hand, used to explore
+mechanical design, electronics and control before tackling anything
+modular or reconfigurable.
 </p>
 </section>
 
 <section class="report-section">
 <span class="section-number">// 02</span>
-<h2>Research Direction — Project CHAMELEON</h2>
+<h2>The Core Idea</h2>
 
 <blockquote class="chameleon-quote">
-A robot should not be limited by the shape it was originally built with.
+A robot should not be a machine built for one purpose.
+It should be a system capable of becoming whatever machine is needed.
 </blockquote>
 
 <p>
-The main research question behind this project is:
-</p>
-
-<p>
-<strong>
-Can a modular robotic system change its own structure to better handle
-unfamiliar environments?
-</strong>
-</p>
-
-<p>
-Traditional robotics usually follows a fixed process:
+<strong>Core research question:</strong> can a collection of simple robotic
+modules autonomously reorganise their physical structure to survive and
+complete unknown tasks in changing environments?
 </p>
 
 <div class="flow-diagram">
-<div class="flow-step">Human designs robot for a purpose</div>
+<div class="flow-step">Human designs robot</div>
 <div class="flow-arrow">↓</div>
 <div class="flow-step">Robot is manufactured</div>
 <div class="flow-arrow">↓</div>
-<div class="flow-step">Robot performs its assigned task</div>
+<div class="flow-step">Robot performs one specific task</div>
 <div class="flow-arrow">↓</div>
-<div class="flow-step warn">Robot struggles when conditions change</div>
+<div class="flow-step warn">Robot fails outside its design</div>
 </div>
 
-<p>
-CHAMELEON explores a more adaptive approach:
-</p>
+<p>The proposed alternative:</p>
 
 <div class="flow-diagram">
 <div class="flow-step">Environment changes</div>
 <div class="flow-arrow">↓</div>
-<div class="flow-step">Robot gathers information</div>
+<div class="flow-step">Robot understands the problem</div>
 <div class="flow-arrow">↓</div>
-<div class="flow-step">System searches for a suitable configuration</div>
+<div class="flow-step">Robot chooses a new body configuration</div>
 <div class="flow-arrow">↓</div>
 <div class="flow-step">Modules reorganise</div>
 <div class="flow-arrow">↓</div>
-<div class="flow-step good">New structure attempts the task</div>
+<div class="flow-step good">New configuration performs the task</div>
 </div>
 
 <div class="spec-grid">
-
 <div class="spec-box">
 <h3>ADAPTIVE MORPHOLOGY</h3>
-<p>
-How can a robot decide what shape it should become?
-</p>
+<p>How does a system decide what shape to become for an unknown problem?</p>
 </div>
-
 <div class="spec-box">
 <h3>SELF-ORGANISATION</h3>
-<p>
-Can simple modules create complex structures through communication?
-</p>
+<p>Can complex structure emerge from simple modules with only local
+awareness, no central controller?</p>
 </div>
-
-<div class="spec-box">
-<h3>AUTONOMOUS DESIGN</h3>
-<p>
-Can a robot discover solutions instead of only following human designs?
-</p>
-</div>
-
 <div class="spec-box">
 <h3>SELF-REPAIR</h3>
-<p>
-If modules fail, can the remaining system adapt and continue?
-</p>
+<p>If part of the system fails, can the rest detect it, rearrange, and
+keep going?</p>
 </div>
-
 <div class="spec-box">
 <h3>ENERGY OPTIMISATION</h3>
-<p>
-How can a robot balance strength, stability and energy usage?
-</p>
+<p>Judging a configuration not just by success, but by efficiency,
+stability and speed.</p>
+</div>
 </div>
 
-</div>
+<p class="research-note">
+This is the research direction, not a solved problem — expect this section
+to change a lot as the project develops.
+</p>
 </section>
 
 <section class="report-section">
 <span class="section-number">// 03</span>
-<h2>Initial Approach</h2>
-
+<h2>Current Status</h2>
 <p>
-The first stage of CHAMELEON will focus on simulation. Creating a physical
-robot with many moving modules would be unrealistic at this stage, so the
-system will first be explored digitally.
+Project CHAMELEON is currently in the research and planning stage. The
+focus has been on understanding existing work in modular robotics, swarm
+intelligence and adaptive systems, while defining the architecture for the
+first simulation. Initial module behaviour, communication methods and
+system design are being planned before development begins. The next
+milestone is creating a proof-of-concept simulation to test whether simple
+robotic modules can organise themselves using local interactions.
 </p>
-
-<p>
-A simulation environment would allow different module designs, behaviours
-and coordination methods to be tested before considering physical prototypes.
-</p>
-
-<ul class="timeline-report">
-<li>Researching existing modular robotic systems</li>
-<li>Understanding current limitations in adaptive robotics</li>
-<li>Designing possible module concepts</li>
-<li>Developing simulation ideas</li>
-<li>Testing different approaches</li>
-</ul>
 </section>
 
 <section class="report-section">
 <span class="section-number">// 04</span>
-<h2>Example Scenario</h2>
-
+<h2>Current Build — Robotic Hand</h2>
 <p>
-A simulated environment presents the system with a challenge it has not
-encountered before.
+The first physical step: a hand-shaped robot, used to learn mechanical
+design, electronics and the software behind actuating individual fingers
+— foundational skills before attempting anything reconfigurable.
 </p>
-
-<div class="flow-diagram">
-<div class="flow-step">Challenge detected: large gap</div>
-<div class="flow-arrow">↓</div>
-<div class="flow-step">Available modules analysed</div>
-<div class="flow-arrow">↓</div>
-<div class="flow-step">Possible structures evaluated</div>
-<div class="flow-arrow">↓</div>
-<div class="flow-step good">Modules form a bridge structure</div>
-</div>
-
-<p>
-The chosen configuration can then be evaluated using:
-</p>
-
-<div class="spec-grid">
-
-<div class="spec-box">
-<h3>SUCCESS</h3>
-<p>
-Was the task completed?
-</p>
-</div>
-
-<div class="spec-box">
-<h3>ENERGY</h3>
-<p>
-How much power was required?
-</p>
-</div>
-
-<div class="spec-box">
-<h3>STABILITY</h3>
-<p>
-How reliable was the structure?
-</p>
-</div>
-
-</div>
-</section>
-
-<section class="report-section">
-<span class="section-number">// 05</span>
-<h2>Development Log</h2>
-
 <ul class="timeline-report">
-<li>Research into self-reconfigurable robotics</li>
-<li>Review of current robotic limitations</li>
-<li>Planning simulation methods</li>
-<li>Exploring possible algorithms</li>
-<li>Documenting results and improvements</li>
+<li>Research and planning</li>
+<li>Mechanical design</li>
+<li>Electronics integration</li>
+<li>Programming and testing</li>
 </ul>
 </section>
 
 <section class="report-section">
-<span class="section-number">// 06</span>
-<h2>Documentation</h2>
-
+<span class="section-number">// 05</span>
+<h2>Technical Details</h2>
 <div class="gallery-placeholder">
-Research notes, diagrams, simulations and future prototypes will be added
-as Project CHAMELEON develops.
+Components, wiring diagrams and code will be added here as the build
+progresses.
 </div>
+</section>
 
+<section class="report-section">
+<span class="section-number">// 06</span>
+<h2>Gallery</h2>
+<div class="gallery-placeholder">
+Photos and videos coming soon.
+</div>
 </section>
 
 </div>
