@@ -700,7 +700,7 @@ pointer-events:none;
 transform:translate(-50%,10px) scale(.85) rotate(40deg);
 transform-origin:top center;
 transition:.6s cubic-bezier(.2,1.4,.4,1);
-z-index:20;
+z-index:999;
 }
 
 
@@ -1350,4 +1350,70 @@ animation:loading 2s forwards;
 to{
 width:100%;
 }
+}
+.contact-system{
+position:absolute;
+left:50%;
+top:100%;
+opacity:0;
+pointer-events:none;
+transform:translate(-50%,10px) scale(.85) rotate(40deg);
+transform-origin:top center;
+transition:.6s cubic-bezier(.2,1.4,.4,1);
+z-index:999;
+}
+
+.contact-system.active{
+opacity:1;
+pointer-events:auto;
+transform:translate(-50%,0) scale(1) rotate(40deg);
+}
+
+.contact-card{
+width:270px;
+padding:20px;
+color:#07324d;
+background:white;
+border:5px solid #020604;
+border-radius:15px;
+box-shadow:10px 10px 0 rgba(0,0,0,.5);
+}
+
+.contact-card a{
+display:block;
+color:#164f35;
+}
+.report-page{
+min-height:100vh;
+padding:140px 20px 100px;
+}
+
+.report-container{
+width:min(900px,95%);
+margin:auto;
+}
+
+.report-terminal{
+background:rgba(0,0,0,.45);
+border:3px solid var(--lime);
+border-radius:12px;
+color:white;
+}
+
+.terminal-body{
+padding:40px;
+}
+
+.report-title{
+color:white;
+font-size:2.6rem;
+}
+
+.report-section h2{
+color:white;
+}
+
+.report-section p{
+color:white;
+line-height:1.7;
 }
