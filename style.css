@@ -1417,3 +1417,41 @@ footer{
     letter-spacing:2px;
     opacity:.7;
 }
+.project-research{
+    text-align:left;
+    max-width:480px;
+    margin:0 auto 20px;
+}
+
+.project-research h2{
+    margin-bottom:10px;
+    font-size:1.1rem;
+    color:var(--green);
+}
+
+.research-name{
+    font-weight:bold;
+    letter-spacing:1px;
+    color:var(--pink);
+    margin-bottom:10px;
+}
+
+.research-quote{
+    font-style:italic;
+    padding:12px 18px;
+    margin-bottom:12px;
+    line-height:1.5;
+    border-left:4px solid var(--lime);
+    border-radius:0 10px 10px 0;
+    background:rgba(255,255,255,.15);
+}
+
+.research-body{
+    line-height:1.6;
+    margin-bottom:10px;
+}
+
+.research-note{
+    font-size:.8rem;
+    opacity:.7;
+}
