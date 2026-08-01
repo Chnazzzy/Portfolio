@@ -1663,3 +1663,6 @@ footer{
     border:2px dashed rgba(255,255,255,.2);
     border-radius:12px;
 }
+body{
+    outline:20px solid red !important;
+}
