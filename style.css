@@ -4,19 +4,25 @@
  */
 
 :root{
-    --forest:#071a12;
-    --forest-dark:#020806;
-    --green:#2c8050;
-    --pink:#b8ff72;
-    --lime:#b8ff72;
-    --cyan:#b8ffe0;
-    --silver:#d9e8ee;
-    --chrome:#718b9b;
-    --screen:#caffdf;
-    --ink:#5ec6cd;
-    --outline:#010201;
-    --white:#f5fff8;
-    --shadow:0 25px 60px rgba(0,0,0,.65);
+    --bg:#060816;
+    --bg-dark:#01030a;
+    --primary:#49d7ff;
+    --secondary:#8d5cff;
+    --pink:#ff63d7;
+    --cyan:#8efcff;
+    --blue:#67b7ff;
+    --purple:#b58cff;
+    --silver:#dce8f7;
+    --chrome:#7d94c4;
+    --screen:#b8ffff;
+    --ink:#04263f;
+    --outline:#010101;
+    --white:#f5fbff;
+    --shadow:
+    0 25px 70px rgba(0,0,0,.75);
+
+    --glow:
+    0 0 18px rgba(73,215,255,.7);
 }
 
 *{
@@ -35,8 +41,9 @@ body{
     font-family:Tahoma,Verdana,Arial,sans-serif;
     color:white;
     background:
-    radial-gradient(circle at top,#8bd2c7,transparent 40%),
-    linear-gradient(180deg,var(--forest),var(--forest-dark));
+    radial-gradient(circle at 50% -10%,rgba(130,80,255,.35),transparent 45%),
+    radial-gradient(circle at 85% 10%,rgba(73,215,255,.25),transparent 35%),
+    linear-gradient(180deg,#090b1b,#03040a);
 }
 
 a{
@@ -113,7 +120,8 @@ header{
 
 #contactButton{
     padding:10px 25px;
-    border:3px solid var(--lime);
+    border:2px solid #49d7ff;
+    box-shadow:0 0 20px rgba(73,215,255,.3);
     border-radius:30px;
     background:rgba(0,0,0,.4);
     color:white;
@@ -122,8 +130,9 @@ header{
 }
 
 #contactButton:hover{
-    background:var(--lime);
-    color:black;
+    background:#49d7ff;
+    color:#001522;
+    box-shadow:0 0 10px #49d7ff,0 0 35px #49d7ff;
     transform:translateY(-3px);
 }
 
@@ -212,7 +221,8 @@ header{
     height:150px;
     margin:auto;
     position:relative;
-    background:linear-gradient(#fff,var(--chrome));
+    background:
+    linear-gradient(180deg,#ffffff 0%,#dce8ff 30%,#8ca9df 65%,#4d5d8c 100%);
     border:6px solid var(--outline);
     border-radius:70px 70px 35px 35px;
     box-shadow:var(--shadow),inset 0 -20px 30px rgba(0,0,0,.2);
@@ -266,7 +276,7 @@ header{
     position:absolute;
     top:20px;
     left:12px;
-    background:#073a2b;
+    background:#5f0000;
     border-radius:50%;
     transition:.3s;
 }
@@ -327,7 +337,8 @@ header{
     height:500px;
     padding:25px;
     position:relative;
-    background:linear-gradient(#d8efff,#527a99);
+    background:
+    linear-gradient(180deg,#edf6ff,#bfd7ff 35%,#7c8ed0 80%,#5567a8);
     border:8px solid var(--outline);
     border-radius:35px;
     box-shadow:inset 0 -20px 30px rgba(0,0,0,.25);
@@ -342,13 +353,14 @@ header{
     border:5px solid var(--outline);
     border-radius:20px;
     cursor:pointer;
-    background:linear-gradient(135deg,#dcfff0,var(--screen));
+    background:
+    linear-gradient(135deg,#e4ffff,#92faff 45%,#6fe8ff 100%);
     transition:.3s;
 }
 
 .screen:hover{
     transform:scale(1.03);
-    box-shadow:0 0 25px var(--lime);
+    box-shadow:0 0 12px #49d7ff,0 0 35px #49d7ff,0 0 60px rgba(73,215,255,.45);
 }
 
 .screen:active{
@@ -420,7 +432,7 @@ header{
     font-size:.75rem;
     font-weight:bold;
     color:#102000;
-    background:linear-gradient(#d7ff72,#8ddb3b);
+    background:linear-gradient(#c7e5ff,#8ec5ff,#5f8cff);
     border:5px solid var(--outline);
     border-radius:50%;
     transition:.3s;
@@ -428,7 +440,8 @@ header{
 
 .project-buttons a:hover{
     transform:translateY(-8px) rotate(-5deg);
-    box-shadow:0 0 25px var(--lime);
+    background:#49d7ff;
+    box-shadow:0 0 30px #49d7ff;
 }
 
 .project-buttons span{
@@ -828,7 +841,8 @@ header{
     top:0;
     height:100%;
     width:4px;
-    background:var(--lime);
+    background:var(--primary);
+    color:var(--pink);
     box-shadow:0 0 15px var(--lime);
 }
 
@@ -1054,10 +1068,10 @@ footer{
     width:350px;
     padding:30px;
     text-align:center;
-    border:4px solid var(--lime);
+    border:4px solid #49d7ff;
+    box-shadow:0 0 25px #49d7ff,0 0 60px rgba(73,215,255,.3);
     border-radius:20px;
     background:var(--forest-dark);
-    box-shadow:0 0 30px var(--lime);
 }
 
 
@@ -1073,6 +1087,7 @@ footer{
     margin-top:20px;
     border:2px solid white;
     border-radius:20px;
+    background:linear-gradient(90deg,#49d7ff,#8d5cff,#49d7ff);
 }
 
 
