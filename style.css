@@ -1401,7 +1401,7 @@ footer{
 
 
 .info-box {
-    background: rgba(255,255,255,.65)
+    background; rgba(255,255,255,.65)
     border: 1px solid rgba(150,255,150,0.25);
     padding: 25px;
     border-radius: 12px;
@@ -1885,7 +1885,7 @@ footer{
  */
 
 .project-page{
-    min-height:100vh;
+    min-height:auto;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -2339,4 +2339,31 @@ pointer-events:none;
     top:35%;
     right:5%;
     animation-delay:2s;
+}
+.robot-page{
+    min-height:900px;
+    padding-bottom:0;
+    overflow:visible;
+    z-index:20;
+}
+
+.robot-container{
+    height:560px;
+}
+
+.robot-body{
+    height:400px;
+}
+
+.contact-system{
+    top:65%;
+    z-index:999;
+}
+
+.journey{
+    margin-top:0;
+}
+.journey{
+    position:relative;
+    z-index:1;
 }
