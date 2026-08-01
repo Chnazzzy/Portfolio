@@ -4,28 +4,28 @@ FRUTIGER AERO / Y2K STYLE
 */
 
 :root{
---bg:#dff8ff;
---bg2:#8deaff;
---deep:#1467b8;
---sky:#69ddff;
---cyan:#b8ffff;
---aqua:#72f6ff;
---glass:rgba(255,255,255,.55);
---glass2:rgba(255,255,255,.25);
---chrome:#edf8ff;
---chrome-dark:#8da9c7;
---blue:#39bfff;
+--bg:#d9f3ff;
+--bg2:#8fdfff;
+--deep:#1c5ca8;
+--sky:#65d9ff;
+--cyan:#aefcff;
+--aqua:#6ef3ff;
+--glass:#ffffffaa;
+--glass2:#e8fbffcc;
+--chrome:#dfe6ef;
+--chrome-dark:#96a8c6;
+--blue:#3498ff;
 --green:#74f27c;
---lime:#b8ff78;
---pink:#ff8fd8;
---outline:#547ca5;
---silver:#dcecff;
---ink:#07324d;
---forest-dark:#06251d;
+--lime:#b8ff66;
+--pink:#ff6fae;
 --primary:#49d7ff;
---screen:#e8ffff;
---shine:white;
---shadow:0 30px 80px rgba(0,120,220,.25);
+--outline:#315485;
+--silver:#dfe6ef;
+--ink:#07324d;
+--screen:#e4ffff;
+--forest-dark:#06385b;
+--shine:#ffffff;
+--shadow:0 30px 70px rgba(44,88,150,.22);
 }
 
 *{
@@ -42,7 +42,7 @@ body{
 min-height:100vh;
 overflow-x:hidden;
 font-family:Tahoma,Verdana,Arial,sans-serif;
-color:white;
+color:#07324d;
 background:
 radial-gradient(circle at 20% 10%,rgba(255,255,255,.8),transparent 18%),
 radial-gradient(circle at 80% 20%,rgba(100,220,255,.7),transparent 25%),
@@ -136,10 +136,8 @@ z-index:50;
 font-size:1.5rem;
 font-weight:900;
 letter-spacing:3px;
-background:linear-gradient(#fff,#9feaff,#fff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-filter:drop-shadow(0 5px 10px rgba(0,100,200,.3));
+color:#06385b;
+text-shadow:0 3px 10px rgba(255,255,255,.8);
 }
 
 #contactButton{
@@ -194,12 +192,15 @@ text-shadow:0 0 10px white;
 .intro-text h1{
 font-size:3.5rem;
 margin:20px 0;
-text-shadow:0 10px 30px rgba(0,80,160,.4);
+color:#06385b;
+text-shadow:0 5px 15px rgba(0,80,160,.3);
 }
 
 .intro-text p{
 line-height:1.6;
-opacity:.85;
+color:#174f35;
+opacity:1;
+font-weight:500;
 }
 
 
@@ -1027,8 +1028,9 @@ font-size:.75rem;
 .section-title h2{
 margin-top:10px;
 font-size:3rem;
+color:#06385b;
 text-shadow:
-0 8px 20px rgba(0,100,200,.25);
+0 5px 15px rgba(255,255,255,.8);
 }
 
 
@@ -1090,7 +1092,7 @@ flex:1;
 padding:25px;
 border-radius:25px;
 background:
-rgba(255,255,255,.35);
+rgba(255,255,255,.75);
 border:2px solid rgba(255,255,255,.7);
 box-shadow:
 0 20px 40px rgba(0,100,200,.2),
@@ -1101,7 +1103,7 @@ backdrop-filter:blur(15px);
 
 .timeline-content h3{
 margin-bottom:10px;
-color:#008f63;
+color:#07324d;
 }
 
 
@@ -1171,6 +1173,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 border-top:2px solid rgba(255,255,255,.5);
+color:#06385b;
 }
 
 
@@ -1302,6 +1305,7 @@ width:350px;
 padding:30px;
 text-align:center;
 border:4px solid white;
+color:#07324d;
 box-shadow:
 0 0 30px white,
 0 0 60px #49d7ff;
