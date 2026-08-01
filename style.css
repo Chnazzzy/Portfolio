@@ -171,7 +171,7 @@ header{
  */
 
 .robot-page{
-    min-height:auto;
+    min-height:950px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -207,10 +207,12 @@ header{
 /* 
    ROBOT
  */
-
+.robot-page{
+    min-height:820px;
+}
 .robot-container{
     width:600px;
-    height:700px;
+    height:620px;
     perspective:1500px;
 }
 
@@ -566,7 +568,7 @@ header{
 .contact-system{
     position:absolute;
     left:50%;
-    top:100%;
+    top:85%;
     opacity:0;
     pointer-events:none;
     transform:translate(-50%,10px) scale(.85) rotate(40deg);
@@ -804,7 +806,7 @@ header{
 .journey,
 .skills{
     width:min(1000px,90%);
-    margin:35px auto;
+    margin:20px auto;
 }
 
 .journey{
@@ -1022,7 +1024,7 @@ header{
 footer{
     width:94%;
     max-width:1100px;
-    margin:60px auto 30px;
+    margin:25px auto 30px;
     padding:10px 14px;
     display:flex;
     justify-content:space-between;
