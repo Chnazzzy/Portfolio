@@ -1312,34 +1312,19 @@ footer{
     min-height:100vh;
     display:flex;
     justify-content:center;
+    align-items:center;
     padding:140px 20px 80px;
 }
 
-.project-window{
-    width:min(900px,95%);
-    height:fit-content;
-    overflow:hidden;
+.project-card{
+    width:min(600px,95%);
+    padding:40px;
+    text-align:center;
+    color:var(--ink);
     background:linear-gradient(#dcecff,#8fb9d8);
     border:6px solid var(--outline);
     border-radius:25px;
     box-shadow:var(--shadow);
-}
-
-.project-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:14px 25px;
-    color:white;
-    font-weight:bold;
-    letter-spacing:2px;
-    font-size:.85rem;
-    background:linear-gradient(#6bb4ff,#24588a);
-}
-
-.project-content{
-    padding:40px;
-    color:var(--ink);
 }
 
 .project-badge{
@@ -1355,29 +1340,53 @@ footer{
     border-radius:20px;
 }
 
-.project-content h1{
-    font-size:3rem;
-    line-height:1.1;
-    margin-bottom:20px;
+.project-card h1{
+    font-size:2.6rem;
+    margin-bottom:15px;
     color:var(--green);
 }
 
 .project-intro{
-    max-width:650px;
+    max-width:480px;
+    margin:0 auto 25px;
     line-height:1.6;
-    margin-bottom:20px;
     opacity:.9;
 }
 
-.project-status{
-    font-weight:bold;
-    letter-spacing:2px;
-    margin-bottom:10px;
-    font-size:.85rem;
+.project-preview{
+    overflow:hidden;
+    border:5px solid var(--outline);
+    border-radius:15px;
+    margin-bottom:25px;
 }
 
-.project-status span{
-    color:#15933c;
+.project-preview img{
+    width:100%;
+    display:block;
+}
+
+.project-actions{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.report-btn{
+    display:inline-block;
+    padding:12px 25px;
+    color:var(--ink);
+    font-weight:bold;
+    text-decoration:none;
+    border:2px solid var(--outline);
+    border-radius:8px;
+    background:linear-gradient(#fff,var(--silver));
+    transition:0.3s;
+}
+
+.report-btn:hover{
+    transform:scale(1.05);
+    background:var(--lime);
 }
 
 .wordmark{
@@ -1400,4 +1409,11 @@ footer{
 .back-link:hover{
     background:var(--lime);
     color:black;
+}
+
+.project-tech{
+    margin-top:20px;
+    font-size:.8rem;
+    letter-spacing:2px;
+    opacity:.7;
 }
