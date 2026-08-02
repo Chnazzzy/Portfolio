@@ -2008,8 +2008,8 @@ footer{
 }
 
 .glitch-heading{
-    color:#fff;
-    text-shadow:2px 0 var(--myspace-hot),-2px 0 var(--cyan);
+    color:#9fe11d;
+    text-shadow:2px 0 var(#0689e4),-2px 0 var(--cyan);
 }
 
 .myspace-glitter{
@@ -2295,24 +2295,12 @@ overflow:hidden;
 
 
 button:before,
-a:before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-left:0;
-
-width:100%;
-height:45%;
-
-background:
-linear-gradient(
-180deg,
-rgba(255,255,255,.8),
-transparent
-);
+a:before {
+    content: none !important;
+    background: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
 
 border-radius:inherit;
 
