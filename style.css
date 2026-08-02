@@ -2933,3 +2933,21 @@ body:after{ opacity:.05; }
     min-height: auto;
     padding-bottom: 0;
 }
+/* Make the Project Chameleon title fully green in LIGHT MODE */
+[data-theme="light"] .chameleon-page h1,
+[data-theme="light"] .chameleon-page .project-title,
+[data-theme="light"] .chameleon-page .project-card:first-child {
+    background: rgba(10,22,16,.7) !important;
+    color: #e4ffe9 !important;
+    border-color: rgba(141,255,77,.25) !important;
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.5),
+        inset 0 1px 0 rgba(141,255,77,.12),
+        0 0 25px rgba(141,255,77,.08) !important;
+}
+
+/* Remove bottom gap permanently */
+.robot-page {
+    min-height: auto !important;
+    padding-bottom: 0 !important;
+}
