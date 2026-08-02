@@ -2229,7 +2229,7 @@ body:after{
     color:#006a55;
 
     text-shadow:
-    2px 2px rgb(65, 150, 123);
+    2px 2px rgb(82, 185, 152);
 
 }
 
@@ -2460,7 +2460,24 @@ pointer-events:none;
 [data-theme="dark"] .project-card h1,
 [data-theme="dark"] .report-title,
 [data-theme="dark"] .section-title h2{
-    color:#8cfffb;
+    background:linear-gradient(
+        90deg,
+        #8dff4d,
+        #00eaff,
+        #8c5cff,
+        #ff4de1,
+        #8dff4d
+    );
+
+    background-size:400% 100%;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+
+    animation:rainbowText 5s linear infinite;
+
+    text-shadow:
+        0 0 15px rgba(141,255,77,.35);
 }
 
 [data-theme="dark"] .profile-info div,
@@ -2842,10 +2859,8 @@ body:after{ opacity:.05; }
 
 [data-theme="dark"] .report-section h2,
 [data-theme="dark"] .project-card h1,
-[data-theme="dark"] .report-title,
 [data-theme="dark"] .section-title h2,
 [data-theme="dark"] .win95-body h1{
-    color:#9dff5c;
     text-shadow:0 0 12px rgba(141,255,77,.35);
 }
 
