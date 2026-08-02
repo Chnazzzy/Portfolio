@@ -2295,7 +2295,7 @@ overflow:hidden;
 
 
 button:before,
-a:none{
+a:before{
 
 content:"";
 
