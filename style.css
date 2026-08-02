@@ -2393,7 +2393,7 @@ pointer-events:none;
    robot stacking fix, logo fix, floating decor fix, more lime)
    ================================================================ */
 
-/* ---------- 1. NIGHT MODE THEME ---------- */
+/* 1. NIGHT MODE THEME */
 :root[data-theme="dark"]{
     --forest:#0a1a24;
     --forest-dark:#0d2433;
@@ -2496,7 +2496,7 @@ pointer-events:none;
     transform:translateY(-3px);
 }
 
-/* ---------- 2. FIX: ROBOT HEAD / LEGS OVERLAPPING THE BODY ---------- */
+/* 2. FIX: ROBOT HEAD / LEGS OVERLAPPING THE BODY */
 .robot-container{
     height:800px;
 }
@@ -2516,7 +2516,7 @@ pointer-events:none;
     min-height:900px;
 }
 
-/* ---------- 3. FIX: LOGO READABILITY AGAINST GRADIENT ---------- */
+/* 3. FIX: LOGO READABILITY AGAINST GRADIENT */
 .logo{
     background:none;
     -webkit-text-fill-color:initial;
@@ -2526,14 +2526,14 @@ pointer-events:none;
         0 0 12px rgba(255,255,255,.7);
 }
 
-/* ---------- 4. FIX: STATIC HEARTS / STARS ---------- */
+/* 4. FIX: STATIC HEARTS / STARS */
 .floating-star,
 .floating-heart{
     animation:floatDecor 6s infinite ease-in-out;
 }
 .floating-heart{ animation-delay:3s; }
 
-/* ---------- 5. WIN95-STYLE ABOUT WINDOW ---------- */
+/* 5. WIN95-STYLE ABOUT WINDOW */
 .window-header{
     background:linear-gradient(180deg,var(--win-titlebar-a),var(--win-titlebar-b));
 }
@@ -2563,7 +2563,7 @@ pointer-events:none;
     border-radius:0;
 }
 
-/* ---------- 6. WIN95-STYLE CONTACT CARD ---------- */
+/* 6. WIN95-STYLE CONTACT CARD */
 .card-top{
     background:linear-gradient(180deg,var(--win-titlebar-a),var(--win-titlebar-b));
     color:#fff;
@@ -2577,7 +2577,7 @@ pointer-events:none;
     10px 15px 30px rgba(0,100,150,.3);
 }
 
-/* ---------- 7. READABLE, BOXED RESEARCH / REPORT SECTIONS ---------- */
+/* 7. READABLE, BOXED RESEARCH / REPORT SECTIONS */
 .report-section{
     padding:30px 35px;
     border-radius:18px;
@@ -2652,7 +2652,7 @@ pointer-events:none;
     opacity:1;
 }
 
-/* ---------- 8. DE-MAC-IFY THE CHAMELEON TERMINAL / MYSPACE FLAVOUR ---------- */
+/* 8. DE-MAC-IFY THE CHAMELEON TERMINAL / MYSPACE FLAVOUR */
 .report-terminal{
     border:3px solid white;
     border-radius:12px;
@@ -2681,7 +2681,7 @@ pointer-events:none;
     font-weight:bold;
 }
 
-/* ---------- 9. VIDEO GAME PAGE — AERO + VINTAGE WINDOWS ---------- */
+/* 9. VIDEO GAME PAGE — AERO + VINTAGE WINDOWS */
 .win95-body{
     background:rgba(255,255,255,.15);
 }
@@ -2690,7 +2690,7 @@ pointer-events:none;
     color:#052b20;
 }
 
-/* ---------- 10. MORE LIME ACCENTS ---------- */
+/* 10. MORE LIME ACCENTS */
 .timeline-icon,
 .win95-titlebar span,
 .terminal-bar span{
@@ -2705,3 +2705,223 @@ pointer-events:none;
 .report-status-row span:first-child{
     color:var(--lime);
 }
+
+/* ================================================================
+   PATCH v2 — new colour palettes for light + dark mode, toned-down
+   light-mode brightness, contrast fixes for hard-to-read text,
+   logo box cleanup, tighter robot area (less empty space)
+   ================================================================ */
+
+/* single accent variable used for "lime green" LABEL TEXT specifically
+   (var(--lime) itself stays pale mint/cyan — good for glows & borders,
+   bad for text contrast, so labels now use this instead) */
+:root{
+    --accent-green:#2f9e44;
+}
+
+/* LIGHT MODE: softer sky-blue + lime (toned down brightness) */
+body{
+    background:
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,.5), transparent 30%),
+    radial-gradient(circle at 80% 25%, rgba(150,220,225,.38), transparent 42%),
+    linear-gradient(
+        180deg,
+        #bfe6f0 0%,
+        #eaf7ee 45%,
+        #cdeed6 100%
+    );
+}
+
+body:before{ opacity:.14; }
+body:after{ opacity:.05; }
+
+.main-screen,
+.back-screen,
+.screen{
+    background:linear-gradient(145deg, rgba(255,255,255,.75), rgba(150,220,225,.4));
+    box-shadow:
+    inset 0 0 18px rgba(255,255,255,.6),
+    0 15px 25px rgba(0,90,120,.22);
+}
+
+/* DARK MODE: black/navy + chrome + neon lime green */
+:root[data-theme="dark"]{
+    --accent-green:#8dff4d;
+    --lime:#8dff4d;
+    --cyan:#4dd9ff;
+    --green:#4dd9ff;
+    --outline:#5c7a86;
+    --silver:#0e1712;
+    --chrome:#233329;
+    --screen:#0c1710;
+    --ink:#e4ffe9;
+    --win-face:#151f19;
+    --win-face-dark:#0c130f;
+    --win-highlight:#38503f;
+    --win-shadow:#020503;
+    --win-titlebar-a:#1f6b46;
+    --win-titlebar-b:#08131f;
+    --myspace-purple:#9d7bff;
+}
+
+[data-theme="dark"] body{
+    background:
+    radial-gradient(circle at 15% 85%, rgba(141,255,77,.13), transparent 42%),
+    radial-gradient(circle at 85% 15%, rgba(40,120,255,.12), transparent 45%),
+    linear-gradient(160deg,#04080a 0%, #0a1712 50%, #060a10 100%);
+    color:#e4ffe9;
+}
+
+[data-theme="dark"] body:before{
+    opacity:.06;
+    background-image:radial-gradient(circle,#8dff4d 1px,transparent 2px);
+}
+[data-theme="dark"] body:after{ opacity:.04; }
+
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .win95-window,
+[data-theme="dark"] .report-terminal,
+[data-theme="dark"] .timeline,
+[data-theme="dark"] .skill-grid,
+[data-theme="dark"] .contact-card,
+[data-theme="dark"] .xp-window,
+[data-theme="dark"] .journey,
+[data-theme="dark"] .skills,
+[data-theme="dark"] .report-section,
+[data-theme="dark"] .flow-diagram,
+[data-theme="dark"] .spec-box,
+[data-theme="dark"] .gallery-placeholder,
+[data-theme="dark"] .chameleon-quote{
+    background:rgba(10,22,16,.7);
+    color:#e4ffe9;
+    border-color:rgba(141,255,77,.25);
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.5),
+    inset 0 1px 0 rgba(141,255,77,.12),
+    0 0 25px rgba(141,255,77,.08);
+}
+
+[data-theme="dark"] .report-section p,
+[data-theme="dark"] .report-section li,
+[data-theme="dark"] .project-intro,
+[data-theme="dark"] .report-abstract,
+[data-theme="dark"] .flow-step,
+[data-theme="dark"] .spec-box p,
+[data-theme="dark"] .timeline-report li,
+[data-theme="dark"] .contact-card p,
+[data-theme="dark"] .profile-text p{
+    color:#cdf5d8;
+}
+
+[data-theme="dark"] .report-section h2,
+[data-theme="dark"] .project-card h1,
+[data-theme="dark"] .report-title,
+[data-theme="dark"] .section-title h2,
+[data-theme="dark"] .win95-body h1{
+    color:#9dff5c;
+    text-shadow:0 0 12px rgba(141,255,77,.35);
+}
+
+[data-theme="dark"] .profile-info div,
+[data-theme="dark"] .timeline-item{
+    background:rgba(141,255,77,.06);
+    color:#e4ffe9;
+    border-color:rgba(141,255,77,.2);
+}
+[data-theme="dark"] .profile-info strong{ color:#9dff5c; }
+[data-theme="dark"] .profile-text h2{ color:#8dff4d; }
+[data-theme="dark"] .window-content{ background:rgba(10,22,16,.5); }
+
+[data-theme="dark"] .skill-card{
+    color:#bdffd0;
+    background:linear-gradient(145deg,rgba(141,255,77,.08),rgba(20,40,30,.4));
+    border-color:rgba(141,255,77,.25);
+}
+
+[data-theme="dark"] .contact-card{
+    background:linear-gradient(180deg,#132018,#0a120d);
+    border-color:rgba(141,255,77,.4);
+    color:#e4ffe9;
+}
+[data-theme="dark"] .contact-card a{ color:#8dff4d; }
+[data-theme="dark"] .contact-card h3{ color:#4dd9ff; }
+
+[data-theme="dark"] #nightModeToggle,
+[data-theme="dark"] #contactButton,
+[data-theme="dark"] .back-link,
+[data-theme="dark"] .project-buttons a,
+[data-theme="dark"] .report-btn,
+[data-theme="dark"] .win95-btn-lg{
+    background:linear-gradient(180deg,#3a4a40,#141d17);
+    color:#c8ffd4;
+    border-color:rgba(141,255,77,.4);
+}
+
+[data-theme="dark"] .window-header,
+[data-theme="dark"] .win95-titlebar,
+[data-theme="dark"] .terminal-bar{
+    background:linear-gradient(90deg,var(--win-titlebar-a),var(--win-titlebar-b));
+}
+
+/* dark chrome-on-forest robot to match the neon-green/chrome inspiration */
+[data-theme="dark"] .robot-head,
+[data-theme="dark"] .robot-tracks div{
+    background:linear-gradient(#1a2b22,#0d1712);
+    border-color:#4a6b57;
+}
+[data-theme="dark"] .robot-arm{
+    background:linear-gradient(90deg,#1a2b22,#2e4636,#1a2b22);
+    border-color:#4a6b57;
+}
+[data-theme="dark"] .joint,
+[data-theme="dark"] .arm-joint{
+    background:#1a2b22;
+    border-color:#4a6b57;
+}
+[data-theme="dark"] .bolt{
+    background:linear-gradient(#4a6b57,#1a2b22);
+    border-color:#4a6b57;
+}
+[data-theme="dark"] .main-screen,
+[data-theme="dark"] .back-screen,
+[data-theme="dark"] .screen{
+    background:linear-gradient(145deg, rgba(20,35,25,.9), rgba(10,20,15,.7));
+    box-shadow:
+    inset 0 0 22px rgba(141,255,77,.15),
+    0 15px 30px rgba(0,0,0,.5);
+}
+[data-theme="dark"] .screen-content{ color:#e4ffe9; }
+
+/* FIX: "lime" label text was unreadable — use accent-green instead */
+.status,
+.section-title span,
+.flow-arrow,
+.spec-box h3,
+.section-number,
+.timeline-icon,
+.project-tech,
+.report-status-row span:first-child,
+.win95-titlebar span,
+.terminal-bar span{
+    color:var(--accent-green);
+}
+
+[data-theme="dark"] .report-status-row{ color:var(--accent-green); }
+
+/* Remove the gradient box behind the logo entirely */
+.logo{
+    background:none !important;
+    -webkit-background-clip:initial;
+    -webkit-text-fill-color:currentColor;
+    color:#023a5e;
+    text-shadow:0 1px 0 rgba(255,255,255,.85);
+}
+[data-theme="dark"] .logo{
+    color:#e4ffe9;
+    text-shadow:0 0 10px rgba(141,255,77,.5);
+}
+
+/* Tighten the robot area — removes leftover empty space */
+.robot-container{ height:750px; }
+.robot-body{ min-height:500px; padding:15px 0; }
+.robot-page{ min-height:820px; padding-bottom:30px; }
