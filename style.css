@@ -1241,7 +1241,6 @@ footer{
 /* 
    ROBOT MESSAGE
  */
-
 .robot-message{
     position:fixed;
     bottom:40px;
@@ -1252,12 +1251,13 @@ footer{
     border:3px solid var(--lime);
     background:rgba(255,255,255,.55);
     opacity:0;
+    pointer-events:none;
     transition:.4s;
+    z-index:100;
 }
-
-
 .robot-message.show{
     opacity:1;
+    pointer-events:none;
 }
 
 
