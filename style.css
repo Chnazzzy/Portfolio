@@ -1679,12 +1679,6 @@ footer{
     border-radius:20px;
 }
 
-.report-title{
-    font-size:2.6rem;
-    margin:15px 0;
-    color:rgb(109, 219, 131);
-}
-
 .report-abstract{
     max-width:640px;
     line-height:1.7;
