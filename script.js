@@ -131,3 +131,27 @@ if (eyes.length) {
         });
     });
 }
+const aboutButton = document.querySelector(".about-button");
+const aboutSystem = document.getElementById("aboutSystem");
+const closeAbout = document.getElementById("closeAbout");
+
+if (aboutButton) {
+    aboutButton.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+        setTimeout(() => {
+            aboutSystem.classList.add("active");
+        }, 400);
+    });
+}
+
+if (closeAbout) {
+    closeAbout.addEventListener("click", () => {
+        aboutSystem.classList.remove("active");
+    });
+}
