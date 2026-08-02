@@ -1354,7 +1354,7 @@ footer{
     transform: rotate(-40deg) translateX(15px);
 }
 .logo{
-    background: linear-gradient(180deg, #fff 0%, var(--chrome) 50%, #fff 100%);
+    background: linear-gradient(180deg, #fff 0%, var(--chrome) 50%, #27a468 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 1px 0 rgba(255,255,255,.5);
@@ -2929,4 +2929,7 @@ body:after{ opacity:.05; }
 /* Tighten the robot area — removes leftover empty space */
 .robot-container{ height:750px; }
 .robot-body{ min-height:500px; padding:15px 0; }
-.robot-page{ min-height:820px; padding-bottom:30px; }
+.robot-page {
+    min-height: auto;
+    padding-bottom: 0;
+}
