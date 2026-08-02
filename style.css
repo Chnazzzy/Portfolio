@@ -21,10 +21,10 @@
 --win-face-dark:#c8eaff;
 --win-highlight:#ffffff;
 --win-shadow:#6ca5c7;
---win-titlebar-a:#64d9ff;
+--win-titlebar-a:#19aa66;
 --win-titlebar-b:#0066cc;
 --myspace-purple:#8b5cff;
---myspace-hot:#ff5bc8;
+--myspace-hot:#8432b3;
 --cyber-glow:0 0 20px rgba(0,220,255,.5);
 
 }
@@ -942,6 +942,7 @@ header{
 .timeline-content p{
     line-height:1.5;
     opacity:.85;
+    color:#489f00
 }
 
 
