@@ -2693,9 +2693,6 @@ pointer-events:none;
     color: transparent;
     animation: rainbowText 5s linear infinite;
 
-    text-shadow:
-        2px 0 #6bcb3c,
-        -2px 0 #00eaff;
 }
 @keyframes rainbowText{
     from{
