@@ -2386,3 +2386,322 @@ pointer-events:none;
     position:relative;
     z-index:1;
 }
+
+/* ================================================================
+   PATCH — bug fixes + new features (night mode, win95 about/contact,
+   chameleon myspace look, readable research page, aero game page,
+   robot stacking fix, logo fix, floating decor fix, more lime)
+   ================================================================ */
+
+/* ---------- 1. NIGHT MODE THEME ---------- */
+:root[data-theme="dark"]{
+    --forest:#0a1a24;
+    --forest-dark:#0d2433;
+    --green:#3fd0ff;
+    --silver:#0f1e28;
+    --chrome:#1c3444;
+    --screen:#0d2433;
+    --ink:#dff6ff;
+    --outline:#4fb3d9;
+    --white:#0e1c24;
+    --win-face:#1b2a33;
+    --win-face-dark:#0f1b22;
+    --win-highlight:#3a5766;
+    --win-shadow:#04090c;
+    --win-titlebar-a:#1e6fa8;
+    --win-titlebar-b:#062c47;
+}
+
+[data-theme="dark"] body{
+    background:
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,.05), transparent 25%),
+    radial-gradient(circle at 80% 25%, rgba(0,180,255,.18), transparent 35%),
+    linear-gradient(180deg,#031420 0%,#062230 45%,#031a1a 100%);
+    color:#d7f6ff;
+}
+
+[data-theme="dark"] body:before{ opacity:.08; }
+
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .win95-window,
+[data-theme="dark"] .report-terminal,
+[data-theme="dark"] .timeline,
+[data-theme="dark"] .skill-grid,
+[data-theme="dark"] .contact-card,
+[data-theme="dark"] .xp-window,
+[data-theme="dark"] .journey,
+[data-theme="dark"] .skills,
+[data-theme="dark"] .report-section,
+[data-theme="dark"] .flow-diagram,
+[data-theme="dark"] .spec-box,
+[data-theme="dark"] .gallery-placeholder,
+[data-theme="dark"] .chameleon-quote{
+    background:rgba(8,20,28,.65);
+    color:#dff6ff;
+    border-color:rgba(255,255,255,.15);
+}
+
+[data-theme="dark"] .report-section p,
+[data-theme="dark"] .report-section li,
+[data-theme="dark"] .project-intro,
+[data-theme="dark"] .report-abstract,
+[data-theme="dark"] .flow-step,
+[data-theme="dark"] .spec-box p,
+[data-theme="dark"] .timeline-report li{
+    color:#cdeeff;
+}
+
+[data-theme="dark"] .report-section h2,
+[data-theme="dark"] .project-card h1,
+[data-theme="dark"] .report-title,
+[data-theme="dark"] .section-title h2{
+    color:#8cfffb;
+}
+
+[data-theme="dark"] .profile-info div,
+[data-theme="dark"] .timeline-item{
+    background:rgba(255,255,255,.06);
+    color:#dff6ff;
+}
+
+[data-theme="dark"] .skill-card{
+    color:#8cfffb;
+    background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(0,180,255,.1));
+}
+
+[data-theme="dark"] .contact-card{
+    color:#dff6ff;
+    background:linear-gradient(180deg,#122029,#0a161d);
+}
+
+[data-theme="dark"] .contact-card a{
+    color:#8cfffb;
+}
+
+#nightModeToggle{
+    padding:10px 20px;
+    margin-left:12px;
+    border:3px solid var(--lime);
+    border-radius:30px;
+    background:rgba(0,0,0,.4);
+    color:white;
+    font-weight:bold;
+    font-size:.8rem;
+    transition:.3s;
+}
+
+#nightModeToggle:hover{
+    background:var(--lime);
+    color:black;
+    transform:translateY(-3px);
+}
+
+/* ---------- 2. FIX: ROBOT HEAD / LEGS OVERLAPPING THE BODY ---------- */
+.robot-container{
+    height:800px;
+}
+
+.robot-body{
+    height:auto;
+    min-height:520px;
+    padding:20px 0;
+}
+
+.robot-head{ z-index:1; }
+.robot-body{ z-index:2; }
+.robot-tracks{ z-index:3; }
+
+.robot-page{
+    padding-bottom:60px;
+    min-height:900px;
+}
+
+/* ---------- 3. FIX: LOGO READABILITY AGAINST GRADIENT ---------- */
+.logo{
+    background:none;
+    -webkit-text-fill-color:initial;
+    color:#023a5e;
+    text-shadow:
+        0 1px 0 rgba(255,255,255,.9),
+        0 0 12px rgba(255,255,255,.7);
+}
+
+/* ---------- 4. FIX: STATIC HEARTS / STARS ---------- */
+.floating-star,
+.floating-heart{
+    animation:floatDecor 6s infinite ease-in-out;
+}
+.floating-heart{ animation-delay:3s; }
+
+/* ---------- 5. WIN95-STYLE ABOUT WINDOW ---------- */
+.window-header{
+    background:linear-gradient(180deg,var(--win-titlebar-a),var(--win-titlebar-b));
+}
+
+.window-header button{
+    width:22px;
+    height:20px;
+    color:#111;
+    font-weight:bold;
+    background:var(--win-face);
+    border-top:1px solid var(--win-highlight);
+    border-left:1px solid var(--win-highlight);
+    border-right:1px solid var(--win-shadow);
+    border-bottom:1px solid var(--win-shadow);
+}
+
+.window-content{
+    background:rgba(255,255,255,.4);
+}
+
+.profile-info div{
+    border-top:2px solid var(--win-highlight);
+    border-left:2px solid var(--win-highlight);
+    border-right:2px solid var(--win-shadow);
+    border-bottom:2px solid var(--win-shadow);
+    background:rgba(255,255,255,.75);
+    border-radius:0;
+}
+
+/* ---------- 6. WIN95-STYLE CONTACT CARD ---------- */
+.card-top{
+    background:linear-gradient(180deg,var(--win-titlebar-a),var(--win-titlebar-b));
+    color:#fff;
+}
+
+.contact-card{
+    border-radius:6px;
+    border:3px solid white;
+    box-shadow:
+    0 0 0 2px var(--outline),
+    10px 15px 30px rgba(0,100,150,.3);
+}
+
+/* ---------- 7. READABLE, BOXED RESEARCH / REPORT SECTIONS ---------- */
+.report-section{
+    padding:30px 35px;
+    border-radius:18px;
+    background:rgba(255,255,255,.55);
+    backdrop-filter:blur(15px);
+    box-shadow:
+    0 20px 40px rgba(0,100,150,.2),
+    inset 0 2px 5px white;
+    border:2px solid rgba(255,255,255,.85);
+}
+
+.report-section h2{
+    color:#006a55;
+    text-shadow:none;
+    border-bottom:2px solid rgba(0,106,85,.2);
+}
+
+.report-section p,
+.report-section li{
+    color:#073b30;
+    opacity:1;
+}
+
+.section-number{
+    color:#00897b;
+}
+
+.flow-diagram{
+    background:rgba(255,255,255,.55);
+    border:1px solid rgba(0,106,85,.2);
+}
+
+.flow-step{
+    background:rgba(0,168,140,.12);
+    border-left-color:#00a884;
+    color:#073b30;
+}
+
+.flow-step.warn{
+    background:rgba(255,110,110,.15);
+    border-left-color:#e05353;
+}
+
+.flow-step.good{
+    background:rgba(0,168,140,.22);
+    border-left-color:#00a884;
+}
+
+.flow-arrow{ color:#00a884; }
+
+.spec-box{
+    background:rgba(255,255,255,.6);
+    border:1px solid rgba(0,106,85,.2);
+}
+
+.spec-box h3{ color:#00796b; }
+.spec-box p{ color:#073b30; opacity:.85; }
+
+.chameleon-quote{
+    background:rgba(255,255,255,.65);
+    color:#073b30;
+    border-left-color:#00a884;
+}
+
+.timeline-report li{ color:#073b30; }
+.timeline-report li::before{ color:#00a884; }
+
+.gallery-placeholder{
+    background:rgba(255,255,255,.5);
+    border-color:rgba(0,106,85,.3);
+    color:#073b30;
+    opacity:1;
+}
+
+/* ---------- 8. DE-MAC-IFY THE CHAMELEON TERMINAL / MYSPACE FLAVOUR ---------- */
+.report-terminal{
+    border:3px solid white;
+    border-radius:12px;
+    animation:none;
+}
+
+.terminal-bar{
+    background:linear-gradient(90deg,var(--win-titlebar-a),var(--win-titlebar-b));
+    color:#fff;
+    text-shadow:0 1px 1px rgba(0,0,0,.3);
+    border-bottom:none;
+    justify-content:space-between;
+}
+
+.report-badge{
+    color:#052b20;
+}
+
+.report-title{
+    color:#fff;
+    text-shadow:2px 0 var(--myspace-hot),-2px 0 var(--cyan);
+}
+
+.report-status-row{
+    color:#00796b;
+    font-weight:bold;
+}
+
+/* ---------- 9. VIDEO GAME PAGE — AERO + VINTAGE WINDOWS ---------- */
+.win95-body{
+    background:rgba(255,255,255,.15);
+}
+
+.win95-badge{
+    color:#052b20;
+}
+
+/* ---------- 10. MORE LIME ACCENTS ---------- */
+.timeline-icon,
+.win95-titlebar span,
+.terminal-bar span{
+    color:var(--lime);
+}
+
+.win95-body h1{
+    text-shadow:0 0 12px rgba(140,255,251,.5);
+}
+
+.project-tech,
+.report-status-row span:first-child{
+    color:var(--lime);
+}
