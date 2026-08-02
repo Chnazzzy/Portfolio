@@ -872,7 +872,7 @@ header{
     margin-top:10px;
     font-size:2.6rem;
     color:#fff;
-    text-shadow:2px 0 var(--myspace-hot),-2px 0 var(--cyan);
+    text-shadow:2px 0 var(#9fe11d),-2px 0 var(--cyan);
 }
 
 
@@ -2947,7 +2947,7 @@ body:after{ opacity:.05; }
 }
 
 /* Remove bottom gap permanently */
-.robot-page {
-    min-height: auto !important;
-    padding-bottom: 0 !important;
+.robot-page{
+    min-height:0 !important;
+    padding-bottom:0 !important;
 }
