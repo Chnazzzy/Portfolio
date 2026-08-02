@@ -2677,8 +2677,34 @@ pointer-events:none;
 }
 
 .report-title{
-    color:#4de06d;
-    text-shadow:2px 0 var(	#6bcb3c),-2px 0 var(--cyan);
+    background: linear-gradient(
+        90deg,
+        #ff4d4d,
+        #ffcc4d,
+        #4dff88,
+        #4de0ff,
+        #8c4dff,
+        #ff4de1,
+        #ff4d4d
+    );
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbowText 5s linear infinite;
+
+    text-shadow:
+        2px 0 #6bcb3c,
+        -2px 0 #00eaff;
+}
+@keyframes rainbowText{
+    from{
+        background-position: 0% 50%;
+    }
+
+    to{
+        background-position: 400% 50%;
+    }
 }
 
 .report-status-row{
