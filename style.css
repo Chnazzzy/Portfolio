@@ -1682,7 +1682,7 @@ footer{
 .report-title{
     font-size:2.6rem;
     margin:15px 0;
-    color:white;
+    color:rgb(109, 219, 131);
 }
 
 .report-abstract{
@@ -2692,7 +2692,6 @@ pointer-events:none;
     background-clip: text;
     color: transparent;
     animation: rainbowText 5s linear infinite;
-
 }
 @keyframes rainbowText{
     from{
