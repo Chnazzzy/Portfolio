@@ -2678,7 +2678,7 @@ pointer-events:none;
 
 .report-title{
     color:#fff;
-    text-shadow:2px 0 var(--myspace-hot),-2px 0 var(--cyan);
+    text-shadow:2px 0 var(	#6bcb3c),-2px 0 var(--cyan);
 }
 
 .report-status-row{
