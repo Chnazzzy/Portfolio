@@ -28,7 +28,6 @@
 --cyber-glow:0 0 20px rgba(0,220,255,.5);
 
 }
-
 *{
     box-sizing:border-box;
     margin:0;
@@ -208,14 +207,20 @@ header{
    ROBOT
  */
 .robot-page{
-    min-height:820px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 0 30px;
 }
 .robot-container{
     width:600px;
     height:620px;
     perspective:1500px;
 }
-
+.robot-container{
+    width:600px;
+    perspective:1500px;
+}
 .robot{
     width:100%;
     height:100%;
@@ -1435,8 +1440,8 @@ footer{
 }
 
 
-.info-box {
-    background; rgba(255,255,255,.65)
+.info-box{
+    background:rgba(255,255,255,.65);
     border: 1px solid rgba(150,255,150,0.25);
     padding: 25px;
     border-radius: 12px;
@@ -2325,8 +2330,11 @@ pointer-events:none;
 }
 
 @keyframes floatBubble{
-    50%{
-        transform:translateY(-80px);
+    0%{
+        transform:translateY(120px);
+    }
+    100%{
+        transform:translateY(-120vh);
     }
 }
 .bubble-one{
@@ -2359,6 +2367,10 @@ pointer-events:none;
     right:5%;
     animation-delay:2s;
 }
+.bubble-one{animation:floatBubble 18s linear infinite;}
+.bubble-two{animation:floatBubble 22s linear infinite;}
+.bubble-three{animation:floatBubble 28s linear infinite;}
+.bubble-four{animation:floatBubble 16s linear infinite;}
 [data-theme="dark"] .bubble{
     background:
     radial-gradient(
@@ -2373,14 +2385,9 @@ pointer-events:none;
     0 0 35px rgba(141,255,77,.25);
 }
 .robot-page{
-    min-height:760px;
     padding-bottom:0;
     overflow:visible;
     z-index:20;
-}
-
-.robot-container{
-    height:520px;
 }
 
 .robot-body{
@@ -2527,9 +2534,6 @@ pointer-events:none;
 }
 
 /* 2. FIX: ROBOT HEAD / LEGS OVERLAPPING THE BODY */
-.robot-container{
-    height:800px;
-}
 
 .robot-body{
     height:auto;
@@ -2543,7 +2547,6 @@ pointer-events:none;
 
 .robot-page{
     padding-bottom:60px;
-    min-height:900px;
 }
 
 /* 3. FIX: LOGO READABILITY AGAINST GRADIENT */
@@ -2972,7 +2975,6 @@ body:after{ opacity:.05; }
 }
 
 /* Tighten the robot area — removes leftover empty space */
-.robot-container{ height:750px; }
 .robot-body{ min-height:500px; padding:15px 0; }
 .robot-page {
     min-height: auto;
