@@ -954,12 +954,7 @@ header{
     margin-bottom:6px;
     font-size:1rem;
     letter-spacing:1px;
-    background:linear-gradient(90deg,#e05252,#e8963a,#d4c822,#3aaa5c,#3a72e8,#9b4fd4,#e05252);
-    background-size:400% 100%;
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    animation:rainbowText 6s linear infinite;
+    color:#2a7a4f;
 }
 
 
@@ -2422,12 +2417,7 @@ a:before {
 }
 
 [data-theme="dark"] .timeline-content h3{
-    background:linear-gradient(90deg,#8dff4d,#00eaff,#8c5cff,#ff4de1,#8dff4d);
-    background-size:400% 100%;
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    animation:rainbowText 5s linear infinite;
+    color:#8dff4d;
 }
 
 [data-theme="dark"] .profile-info div,
