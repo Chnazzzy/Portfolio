@@ -653,7 +653,6 @@ header{
     text-indent:8px;
     text-align:center;
     width:100%;
-    animation:sparkle .8s infinite alternate;
 }
 
 
@@ -674,7 +673,6 @@ header{
 
 .contact-card{
     width:270px;
-    transform:translate(25px);
     padding:20px;
     color:#14251d;
     background:white;
@@ -873,8 +871,19 @@ header{
 .section-title h2{
     margin-top:10px;
     font-size:2.6rem;
-    color:#fff;
-    text-shadow:2px 0 var(#9fe11d),-2px 0 var(--cyan);
+    background:linear-gradient(
+        90deg,
+        #0066ff,
+        #00ccff,
+        #cc00ff,
+        #ff0099,
+        #0066ff
+    );
+    background-size:400% 100%;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    animation:rainbowText 5s linear infinite;
 }
 
 
@@ -1897,9 +1906,9 @@ footer{
     font-family:"Courier New",monospace;
     font-size:.75rem;
     letter-spacing:2px;
-    background:#000;
-    border-top:2px solid var(--win-shadow);
-    border-bottom:2px solid var(--win-highlight);
+    background:#0a2a4a;
+    border-top:2px solid #1a4a7a;
+    border-bottom:2px solid #0d3a60;
 }
 
 .marquee-bar span{
@@ -2015,7 +2024,14 @@ footer{
     color:var(--myspace-hot);
     letter-spacing:6px;
     font-size:1.1rem;
-    animation:sparkle .8s infinite alternate;
+    display:block;
+    white-space:nowrap;
+    overflow:hidden;
+    animation:marqueeRTL 12s linear infinite;
+}
+@keyframes marqueeRTL{
+    0%  { transform:translateX(-100%); }
+    100%{ transform:translateX(100%); }
 }
 /* ==============================
    FRUTIGER AERO RESTORE PACK
