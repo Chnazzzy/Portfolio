@@ -2018,18 +2018,23 @@ footer{
     text-shadow:2px 0 var(#0689e4),-2px 0 var(--cyan);
 }
 
+.myspace-glitter-wrap{
+    display:flex;
+    overflow:hidden;
+    width:100%;
+}
 .myspace-glitter{
     color:var(--myspace-hot);
     letter-spacing:6px;
     font-size:1.1rem;
-    display:block;
     white-space:nowrap;
-    overflow:hidden;
+    flex-shrink:0;
+    min-width:100%;
     animation:marqueeRTL 12s linear infinite;
 }
 @keyframes marqueeRTL{
-    0%  { transform:translateX(-100%); }
-    100%{ transform:translateX(100%); }
+    0%  { transform:translateX(0%); }
+    100%{ transform:translateX(-100%); }
 }
 /* ==============================
    FRUTIGER AERO RESTORE PACK
