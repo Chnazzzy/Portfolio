@@ -36,9 +36,10 @@
 
 html{
     scroll-behavior:smooth;
+    height:100%;
 }
 body{
-    min-height:100vh;
+    min-height:100%;
     overflow-x:hidden;
     font-family:Tahoma,Verdana,Arial,sans-serif;
     color:#123;
@@ -170,13 +171,13 @@ header{
  */
 
 .robot-page{
-    min-height:950px;
     display:flex;
     justify-content:center;
     align-items:center;
     position:relative;
-    padding-top:80px;
-    padding-bottom:40px;
+    padding:120px 0 0;
+    overflow:visible;
+    z-index:20;
 }
 
 .intro-text{
@@ -206,12 +207,6 @@ header{
 /* 
    ROBOT
  */
-.robot-page{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:120px 0 30px;
-}
 .robot-container{
     width:600px;
     height:620px;
@@ -258,7 +253,14 @@ header{
 
 .robot-body{
     position:relative;
-    z-index:3;
+    z-index:2;
+    height:auto;
+    min-height:500px;
+    padding:15px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
 }
 
 .robot-arm{
@@ -351,14 +353,6 @@ header{
 /* 
    ROBOT BODY
  */
-
-.robot-body{
-    height:490px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:15px;
-}
 
 .robot-arm{
     width:75px;
@@ -1473,10 +1467,9 @@ footer{
  */
 
 .project-page{
-    min-height:100vh;
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
     padding:140px 20px 80px;
 }
 
@@ -1620,7 +1613,6 @@ footer{
     opacity:.7;
 }
 .report-page{
-    min-height:100vh;
     padding:140px 20px 100px;
 }
 
@@ -2027,41 +2019,6 @@ footer{
    ============================== */
 
 
-body{
-    background:
-    radial-gradient(circle at 20% 10%,rgba(255,255,255,.95),transparent 25%),
-    radial-gradient(circle at 80% 25%,rgba(117,234,255,.7),transparent 35%),
-    linear-gradient(
-        180deg,
-        #5fd7ff 0%,
-        #dfffff 45%,
-        #b8ecff 100%
-    );
-    color:#003b66;
-}
-
-
-body:before{
-    opacity:.25;
-    background-image:
-    radial-gradient(circle,#ffffff 1px,transparent 2px);
-    background-size:70px 70px;
-}
-
-
-body:after{
-    opacity:.08;
-    background-image:
-    repeating-linear-gradient(
-        0deg,
-        white 0px,
-        transparent 2px,
-        transparent 5px
-    );
-}
-
-
-
 /* glossy glass panels */
 
 .robot-page,
@@ -2300,11 +2257,9 @@ a:before {
     background: none !important;
     width: 0 !important;
     height: 0 !important;
+    border-radius:inherit;
+    pointer-events:none;
 }
-
-border-radius:inherit;
-
-pointer-events:none;
 
 
 .bubble{
@@ -2312,7 +2267,7 @@ pointer-events:none;
     border-radius:50%;
     pointer-events:none;
     z-index:0;
-
+    bottom:-250px;
     background:
     radial-gradient(
         circle at 30% 25%,
@@ -2321,56 +2276,39 @@ pointer-events:none;
         rgba(117,234,255,.25) 40%,
         transparent 70%
     );
-
     box-shadow:
     inset 0 0 20px white,
     0 0 30px rgba(117,234,255,.4);
-
-    animation:floatBubble 12s infinite ease-in-out;
 }
 
 @keyframes floatBubble{
-    0%{
-        transform:translateY(120px);
-    }
-    100%{
-        transform:translateY(-120vh);
-    }
+    0%  { transform:translateY(0); opacity:.8; }
+    100%{ transform:translateY(-130vh); opacity:0; }
 }
+
 .bubble-one{
-    width:140px;
-    height:140px;
-    top:15%;
+    width:140px; height:140px;
     left:10%;
+    animation:floatBubble 18s linear infinite;
 }
-
 .bubble-two{
-    width:80px;
-    height:80px;
-    top:65%;
+    width:80px; height:80px;
     right:15%;
-    animation-delay:3s;
+    animation:floatBubble 22s linear infinite;
+    animation-delay:-8s;
 }
-
 .bubble-three{
-    width:220px;
-    height:220px;
-    bottom:5%;
+    width:220px; height:220px;
     left:5%;
-    animation-delay:6s;
+    animation:floatBubble 28s linear infinite;
+    animation-delay:-14s;
 }
-
 .bubble-four{
-    width:60px;
-    height:60px;
-    top:35%;
+    width:60px; height:60px;
     right:5%;
-    animation-delay:2s;
+    animation:floatBubble 16s linear infinite;
+    animation-delay:-4s;
 }
-.bubble-one{animation:floatBubble 18s linear infinite;}
-.bubble-two{animation:floatBubble 22s linear infinite;}
-.bubble-three{animation:floatBubble 28s linear infinite;}
-.bubble-four{animation:floatBubble 16s linear infinite;}
 [data-theme="dark"] .bubble{
     background:
     radial-gradient(
@@ -2384,15 +2322,6 @@ pointer-events:none;
     inset 0 0 20px rgba(141,255,77,.4),
     0 0 35px rgba(141,255,77,.25);
 }
-.robot-page{
-    padding-bottom:0;
-    overflow:visible;
-    z-index:20;
-}
-
-.robot-body{
-    height:400px;
-}
 
 .contact-system{
     top:65%;
@@ -2401,8 +2330,6 @@ pointer-events:none;
 
 .journey{
     margin-top:0;
-}
-.journey{
     position:relative;
     z-index:1;
 }
@@ -2414,33 +2341,6 @@ pointer-events:none;
    ================================================================ */
 
 /* 1. NIGHT MODE THEME */
-:root[data-theme="dark"]{
-    --forest:#0a1a24;
-    --forest-dark:#0d2433;
-    --green:#3fd0ff;
-    --silver:#0f1e28;
-    --chrome:#1c3444;
-    --screen:#0d2433;
-    --ink:#dff6ff;
-    --outline:#4fb3d9;
-    --white:#0e1c24;
-    --win-face:#1b2a33;
-    --win-face-dark:#0f1b22;
-    --win-highlight:#3a5766;
-    --win-shadow:#04090c;
-    --win-titlebar-a:#1e6fa8;
-    --win-titlebar-b:#062c47;
-}
-
-[data-theme="dark"] body{
-    background:
-    radial-gradient(circle at 20% 10%, rgba(255,255,255,.05), transparent 25%),
-    radial-gradient(circle at 80% 25%, rgba(0,180,255,.18), transparent 35%),
-    linear-gradient(180deg,#031420 0%,#062230 45%,#031a1a 100%);
-    color:#d7f6ff;
-}
-
-[data-theme="dark"] body:before{ opacity:.08; }
 
 [data-theme="dark"] .project-card,
 [data-theme="dark"] .win95-window,
@@ -2535,19 +2435,8 @@ pointer-events:none;
 
 /* 2. FIX: ROBOT HEAD / LEGS OVERLAPPING THE BODY */
 
-.robot-body{
-    height:auto;
-    min-height:520px;
-    padding:20px 0;
-}
-
 .robot-head{ z-index:1; }
-.robot-body{ z-index:2; }
 .robot-tracks{ z-index:3; }
-
-.robot-page{
-    padding-bottom:60px;
-}
 
 /* 3. FIX: LOGO READABILITY AGAINST GRADIENT */
 .logo{
@@ -2801,6 +2690,9 @@ body:after{ opacity:.05; }
 
 /* DARK MODE: black/navy + chrome + neon lime green */
 :root[data-theme="dark"]{
+    --forest:#0a1a24;
+    --forest-dark:#0d2433;
+    --white:#0e1c24;
     --accent-green:#8dff4d;
     --lime:#8dff4d;
     --cyan:#4dd9ff;
@@ -2974,12 +2866,6 @@ body:after{ opacity:.05; }
     text-shadow:0 0 10px rgba(141,255,77,.5);
 }
 
-/* Tighten the robot area — removes leftover empty space */
-.robot-body{ min-height:500px; padding:15px 0; }
-.robot-page {
-    min-height: auto;
-    padding-bottom: 0;
-}
 /* Make the Project Chameleon title fully green in LIGHT MODE */
 [data-theme="light"] .chameleon-page h1,
 [data-theme="light"] .chameleon-page .project-title,
@@ -2993,8 +2879,3 @@ body:after{ opacity:.05; }
         0 0 25px rgba(141,255,77,.08) !important;
 }
 
-/* Remove bottom gap permanently */
-.robot-page{
-    min-height:0 !important;
-    padding-bottom:0 !important;
-}
