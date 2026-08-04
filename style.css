@@ -871,19 +871,12 @@ header{
 .section-title h2{
     margin-top:10px;
     font-size:2.6rem;
-    background:linear-gradient(
-        90deg,
-        #0066ff,
-        #00ccff,
-        #cc00ff,
-        #ff0099,
-        #0066ff
-    );
+    background:linear-gradient(90deg,#e05252,#e8963a,#d4c822,#3aaa5c,#3a72e8,#9b4fd4,#e05252);
     background-size:400% 100%;
     -webkit-background-clip:text;
     background-clip:text;
     color:transparent;
-    animation:rainbowText 5s linear infinite;
+    animation:rainbowText 6s linear infinite;
 }
 
 
@@ -961,7 +954,12 @@ header{
     margin-bottom:6px;
     font-size:1rem;
     letter-spacing:1px;
-    color:var(--myspace-purple);
+    background:linear-gradient(90deg,#e05252,#e8963a,#d4c822,#3aaa5c,#3a72e8,#9b4fd4,#e05252);
+    background-size:400% 100%;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    animation:rainbowText 6s linear infinite;
 }
 
 
@@ -1727,7 +1725,12 @@ footer{
     margin-bottom:15px;
     padding-bottom:10px;
     font-size:1.7rem;
-    color:white;
+    background:linear-gradient(90deg,#e05252,#e8963a,#d4c822,#3aaa5c,#3a72e8,#9b4fd4,#e05252);
+    background-size:400% 100%;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    animation:rainbowText 6s linear infinite;
     border-bottom:2px solid rgba(255,255,255,.15);
 }
 
@@ -2416,6 +2419,15 @@ a:before {
 
     text-shadow:
         0 0 15px rgba(141,255,77,.35);
+}
+
+[data-theme="dark"] .timeline-content h3{
+    background:linear-gradient(90deg,#8dff4d,#00eaff,#8c5cff,#ff4de1,#8dff4d);
+    background-size:400% 100%;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    animation:rainbowText 5s linear infinite;
 }
 
 [data-theme="dark"] .profile-info div,
