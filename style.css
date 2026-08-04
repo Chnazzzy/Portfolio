@@ -2019,7 +2019,6 @@ footer{
 }
 
 .myspace-glitter-wrap{
-    display:flex;
     overflow:hidden;
     width:100%;
 }
@@ -2028,12 +2027,11 @@ footer{
     letter-spacing:6px;
     font-size:1.1rem;
     white-space:nowrap;
-    flex-shrink:0;
-    min-width:100%;
-    animation:marqueeRTL 12s linear infinite;
+    display:inline-block;
+    animation:marqueeRTL 14s linear infinite;
 }
 @keyframes marqueeRTL{
-    0%  { transform:translateX(0%); }
+    0%  { transform:translateX(100vw); }
     100%{ transform:translateX(-100%); }
 }
 /* ==============================
