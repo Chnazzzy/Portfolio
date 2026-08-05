@@ -2254,7 +2254,7 @@ footer{
 .mech-decor{
     position:fixed;
     pointer-events:none;
-    z-index:0;
+    z-index:-1;
     bottom:-100px;
     animation:floatBubble 20s linear infinite;
 }
