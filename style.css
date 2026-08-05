@@ -1188,6 +1188,9 @@ header{
     color:#bdffd0;
     background:linear-gradient(145deg,rgba(141,255,77,.08),rgba(20,40,30,.4));
     border-color:rgba(141,255,77,.25);
+    box-shadow:
+    0 8px 20px rgba(141,255,77,.12),
+    inset 0 2px 8px rgba(141,255,77,.08);
 }
 
 .skill-card:before{
@@ -1203,6 +1206,12 @@ header{
     box-shadow:
     0 15px 35px rgba(0,200,255,.5),
     inset 0 3px 12px white;
+}
+[data-theme="dark"] .skill-card:hover{
+    background:linear-gradient(145deg,rgba(141,255,77,.15),rgba(20,40,30,.6));
+    box-shadow:
+    0 15px 35px rgba(141,255,77,.18),
+    inset 0 3px 12px rgba(141,255,77,.15);
 }
 
 .skill-card::after{
