@@ -2283,9 +2283,9 @@ footer{
 }
 
 /* individual placements — position/size/timing only, edit freely */
-.mech-one{  left:15%;  animation-duration:19s; animation-delay:-2s; }
-.mech-two{  right:20%; animation-duration:24s; animation-delay:-11s; }
-.mech-three{left:35%;  animation-duration:17s; animation-delay:-6s; }
-.mech-four{ right:8%;  animation-duration:29s; animation-delay:-16s; }
-.mech-five{ left:60%;   animation-duration:21s; animation-delay:-9s; }
-.mech-six{ right:70%;   animation-duration:25s; animation-delay:-14s; }
+.mech-one{  left:15%;  animation-duration:1s; animation-delay:-2s; }
+.mech-two{  right:20%; animation-duration:17s; animation-delay:-11s; }
+.mech-three{left:35%;  animation-duration:27s; animation-delay:-6s; }
+.mech-four{ right:8%;  animation-duration:9s; animation-delay:-16s; }
+.mech-five{ left:60%;   animation-duration:13s; animation-delay:-9s; }
+.mech-six{ right:70%;   animation-duration:5s; animation-delay:-14s; }
