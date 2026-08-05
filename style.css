@@ -137,6 +137,7 @@ body:before{
     content:"";
     position:fixed;
     inset:0;
+    z-index:-10;
     opacity:.14;
     pointer-events:none;
     background-image:radial-gradient(#ffffff 20%,transparent 22%);
@@ -145,6 +146,7 @@ body:before{
 
 [data-theme="dark"] body:before{
     opacity:.06;
+    z-index:-10;
     background-image:radial-gradient(circle,#8dff4d 1px,transparent 2px);
 }
 
